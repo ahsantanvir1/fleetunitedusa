@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="canonical" href="https://fleetunitedusa.com"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Fleet United USA — Wholesale Semi Truck Parts | fleetunitedusa.com</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --red:    #c0191a;
+  --red2:   #a31415;
+  --navy:   #0d1f3c;
+  --navy2:  #1a2f52;
+  --white:  #ffffff;
+  --gray1:  #f4f5f7;
+  --gray2:  #e8eaed;
+  --gray3:  #9aa0ac;
+  --gray4:  #5a6170;
+  --text:   #1a1d23;
+  --ff:     'Inter', sans-serif;
+}
+
+html{scroll-behavior:smooth;}
+body{font-family:var(--ff);background:var(--white);color:var(--text);line-height:1.6;font-size:16px;}
+
+/* ─── TOP NOTICE ─────────────────────── */
+.top-notice{
+  background:var(--navy);color:var(--white);
+  text-align:center;padding:10px 20px;
+  font-size:13px;font-weight:500;
+}
+.top-notice a{color:#7eb3f7;text-decoration:none;}
+
+/* ─── NAV ────────────────────────────── */
+nav{
+  background:var(--white);border-bottom:2px solid var(--gray2);
+  position:sticky;top:0;z-index:100;
+}
+.nav-inner{
+  max-width:1200px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px 24px;gap:16px;
+}
+.nav-logo{
+  font-size:22px;font-weight:800;color:var(--navy);text-decoration:none;
+  display:flex;align-items:center;gap:8px;white-space:nowrap;
+}
+.nav-logo-dot{
+  width:10px;height:10px;background:var(--red);border-radius:50%;flex-shrink:0;
+}
+.nav-logo span{color:var(--red);}
+.nav-phone{
+  display:flex;align-items:center;gap:8px;
+  font-size:17px;font-weight:700;color:var(--navy);text-decoration:none;
+}
+.nav-phone-icon{
+  width:32px;height:32px;background:var(--red);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.nav-phone-icon svg{width:15px;height:15px;fill:var(--white);}
+.nav-links{display:flex;align-items:center;gap:4px;}
+.nav-links a{
+  font-size:14px;font-weight:500;color:var(--gray4);text-decoration:none;
+  padding:8px 14px;border-radius:6px;transition:background 0.15s,color 0.15s;
+}
+.nav-links a:hover{background:var(--gray1);color:var(--navy);}
+.nav-cta{
+  background:var(--red);color:var(--white)!important;
+  border-radius:6px!important;font-weight:600!important;
+  padding:10px 20px!important;transition:background 0.15s!important;
+}
+.nav-cta:hover{background:var(--red2)!important;}
+
+/* ─── HERO ───────────────────────────── */
+.hero{
+  background:var(--navy);
+  padding:64px 24px 72px;
+  text-align:center;
+}
+.hero-inner{max-width:760px;margin:0 auto;}
+.hero-tag{
+  display:inline-block;background:rgba(192,25,26,0.2);
+  color:#ff8a8a;font-size:13px;font-weight:600;
+  padding:6px 16px;border-radius:100px;margin-bottom:24px;
+  letter-spacing:0.5px;
+}
+.hero h1{
+  font-size:clamp(32px,5vw,58px);font-weight:800;
+  color:var(--white);line-height:1.15;margin-bottom:20px;
+  letter-spacing:-0.5px;
+}
+.hero h1 span{color:#ff8a8a;}
+.hero p{
+  font-size:clamp(16px,2vw,19px);color:rgba(255,255,255,0.65);
+  max-width:580px;margin:0 auto 36px;line-height:1.7;
+}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:52px;}
+.btn-primary{
+  background:var(--red);color:var(--white);
+  padding:16px 32px;border-radius:8px;font-size:16px;font-weight:700;
+  text-decoration:none;transition:background 0.15s;display:inline-block;
+}
+.btn-primary:hover{background:var(--red2);}
+.btn-secondary{
+  background:rgba(255,255,255,0.1);color:var(--white);
+  padding:16px 32px;border-radius:8px;font-size:16px;font-weight:600;
+  text-decoration:none;transition:background 0.15s;display:inline-block;
+  border:1px solid rgba(255,255,255,0.2);
+}
+.btn-secondary:hover{background:rgba(255,255,255,0.18);}
+
+.hero-stats{
+  display:flex;justify-content:center;gap:0;
+  border-top:1px solid rgba(255,255,255,0.1);padding-top:40px;
+  flex-wrap:wrap;
+}
+.hero-stat{
+  flex:1;min-width:140px;padding:0 24px;
+  border-right:1px solid rgba(255,255,255,0.1);
+}
+.hero-stat:last-child{border:none;}
+.hs-num{font-size:36px;font-weight:800;color:var(--white);line-height:1;}
+.hs-label{font-size:13px;color:rgba(255,255,255,0.45);margin-top:6px;font-weight:500;}
+
+/* ─── TRUST BAR ──────────────────────── */
+.trust-bar{background:var(--gray1);border-bottom:1px solid var(--gray2);padding:16px 24px;}
+.trust-bar-inner{
+  max-width:1200px;margin:0 auto;
+  display:flex;align-items:center;justify-content:center;
+  gap:32px;flex-wrap:wrap;
+}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--navy);}
+.trust-tick{
+  width:20px;height:20px;background:var(--red);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.trust-tick svg{width:10px;height:10px;fill:none;stroke:#fff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
+
+/* ─── SECTION WRAPPER ────────────────── */
+.section{padding:72px 24px;}
+.section-inner{max-width:1200px;margin:0 auto;}
+.section-header{text-align:center;margin-bottom:48px;}
+.section-tag{
+  display:inline-block;background:var(--red);color:var(--white);
+  font-size:11px;font-weight:700;padding:5px 14px;border-radius:100px;
+  letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;
+}
+.section-title{font-size:clamp(26px,3.5vw,40px);font-weight:800;color:var(--navy);line-height:1.2;margin-bottom:12px;}
+.section-sub{font-size:16px;color:var(--gray4);max-width:540px;margin:0 auto;line-height:1.7;}
+
+/* ─── PRODUCTS ───────────────────────── */
+.products-section{background:var(--white);}
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  gap:20px;
+}
+.prod-card{
+  background:var(--white);border:2px solid var(--gray2);border-radius:12px;
+  padding:28px;transition:border-color 0.2s,box-shadow 0.2s;
+  display:flex;flex-direction:column;
+}
+.prod-card:hover{border-color:var(--red);box-shadow:0 4px 24px rgba(192,25,26,0.08);}
+.prod-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:14px;}
+.prod-badge{
+  font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px;
+  text-transform:uppercase;letter-spacing:0.5px;
+}
+.prod-badge.red{background:rgba(192,25,26,0.1);color:var(--red);}
+.prod-badge.navy{background:rgba(13,31,60,0.08);color:var(--navy);}
+.prod-badge.green{background:rgba(16,124,65,0.1);color:#107c41;}
+.prod-icon{
+  width:48px;height:48px;background:var(--gray1);border-radius:10px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.prod-icon svg{width:24px;height:24px;fill:none;stroke:var(--navy);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.prod-name{font-size:20px;font-weight:700;color:var(--navy);margin-bottom:8px;line-height:1.25;}
+.prod-desc{font-size:14px;color:var(--gray4);line-height:1.7;margin-bottom:20px;flex:1;}
+.prod-price-box{
+  background:var(--gray1);border-radius:8px;padding:14px 16px;
+  display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;
+}
+.prod-price-left{}
+.prod-price-from{font-size:11px;color:var(--gray3);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;}
+.prod-price{font-size:28px;font-weight:800;color:var(--navy);line-height:1;}
+.prod-price-unit{font-size:12px;color:var(--gray3);font-weight:500;}
+.prod-moq{font-size:12px;color:var(--gray4);font-weight:500;}
+.prod-link{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--navy);color:var(--white);
+  padding:12px;border-radius:8px;font-size:14px;font-weight:600;
+  text-decoration:none;transition:background 0.15s;
+}
+.prod-link:hover{background:var(--navy2);}
+.prod-link svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
+
+/* ─── CUSTOM CARD ────────────────────── */
+.custom-card{
+  background:var(--navy);border-radius:12px;padding:36px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:32px;flex-wrap:wrap;margin-top:20px;
+}
+.custom-card-left h3{font-size:22px;font-weight:800;color:var(--white);margin-bottom:8px;}
+.custom-card-left p{font-size:15px;color:rgba(255,255,255,0.55);max-width:480px;line-height:1.65;}
+.custom-card a{
+  background:var(--red);color:var(--white);
+  padding:14px 28px;border-radius:8px;font-size:15px;font-weight:700;
+  text-decoration:none;white-space:nowrap;transition:background 0.15s;flex-shrink:0;
+}
+.custom-card a:hover{background:var(--red2);}
+
+/* ─── COMPATIBILITY ──────────────────── */
+.compat-section{background:var(--gray1);}
+.compat-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+  gap:12px;margin-top:8px;
+}
+.compat-card{
+  background:var(--white);border:2px solid var(--gray2);border-radius:10px;
+  padding:18px 14px;text-align:center;font-size:15px;font-weight:600;color:var(--navy);
+  transition:border-color 0.15s;cursor:default;
+}
+.compat-card:hover{border-color:var(--navy);}
+
+/* ─── WHY US ─────────────────────────── */
+.why-section{background:var(--white);}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;}
+.why-card{
+  background:var(--gray1);border-radius:12px;padding:28px;
+}
+.why-icon{
+  width:48px;height:48px;background:var(--white);border:2px solid var(--gray2);
+  border-radius:10px;display:flex;align-items:center;justify-content:center;
+  margin-bottom:18px;
+}
+.why-icon svg{width:22px;height:22px;fill:none;stroke:var(--navy);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.why-title{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.why-desc{font-size:14px;color:var(--gray4);line-height:1.7;}
+
+/* ─── HOW IT WORKS ───────────────────── */
+.how-section{background:var(--navy);padding:72px 24px;}
+.how-inner{max-width:1200px;margin:0 auto;}
+.how-header{text-align:center;margin-bottom:52px;}
+.how-header .section-title{color:var(--white);}
+.how-header .section-sub{color:rgba(255,255,255,0.5);}
+.how-steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px;}
+.how-step{text-align:center;padding:8px;}
+.how-step-num{
+  width:52px;height:52px;background:var(--red);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;font-weight:800;color:var(--white);margin:0 auto 18px;
+}
+.how-step-title{font-size:17px;font-weight:700;color:var(--white);margin-bottom:8px;}
+.how-step-desc{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.7;}
+
+/* ─── TESTIMONIALS ───────────────────── */
+.testi-section{background:var(--gray1);}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;}
+.testi-card{background:var(--white);border-radius:12px;padding:28px;border:2px solid var(--gray2);}
+.testi-stars{color:#f59e0b;font-size:16px;letter-spacing:2px;margin-bottom:16px;}
+.testi-text{font-size:15px;color:var(--text);line-height:1.75;margin-bottom:20px;font-style:italic;}
+.testi-author{display:flex;align-items:center;gap:12px;}
+.testi-avatar{
+  width:40px;height:40px;border-radius:50%;background:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;font-weight:700;color:var(--white);flex-shrink:0;
+}
+.testi-name{font-size:14px;font-weight:700;color:var(--navy);}
+.testi-role{font-size:12px;color:var(--gray3);}
+
+/* ─── CTA BAND ───────────────────────── */
+.cta-band{background:var(--red);padding:64px 24px;text-align:center;}
+.cta-band-inner{max-width:640px;margin:0 auto;}
+.cta-band h2{font-size:clamp(26px,4vw,40px);font-weight:800;color:var(--white);margin-bottom:14px;line-height:1.2;}
+.cta-band p{font-size:17px;color:rgba(255,255,255,0.75);margin-bottom:32px;line-height:1.65;}
+.cta-band-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-white{
+  background:var(--white);color:var(--red);
+  padding:16px 32px;border-radius:8px;font-size:16px;font-weight:700;
+  text-decoration:none;transition:all 0.15s;
+}
+.btn-white:hover{background:var(--navy);color:var(--white);}
+.btn-outline-w{
+  background:none;color:var(--white);
+  padding:16px 32px;border-radius:8px;font-size:16px;font-weight:600;
+  text-decoration:none;border:2px solid rgba(255,255,255,0.4);transition:all 0.15s;
+}
+.btn-outline-w:hover{border-color:var(--white);}
+
+/* ─── CONTACT ────────────────────────── */
+.contact-section{background:var(--white);}
+.contact-inner{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:start;max-width:1200px;margin:0 auto;}
+.contact-info h3{font-size:22px;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.contact-info p{font-size:15px;color:var(--gray4);margin-bottom:32px;line-height:1.65;}
+.contact-cards{display:flex;flex-direction:column;gap:12px;}
+.contact-card{
+  background:var(--gray1);border-radius:10px;padding:18px 20px;
+  display:flex;align-items:center;gap:16px;
+}
+.contact-card-icon{
+  width:44px;height:44px;background:var(--navy);border-radius:10px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.contact-card-icon svg{width:20px;height:20px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.contact-card-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--gray3);margin-bottom:3px;}
+.contact-card-val{font-size:16px;font-weight:700;color:var(--navy);}
+
+.contact-form{background:var(--gray1);border-radius:16px;padding:36px;}
+.contact-form h3{font-size:20px;font-weight:700;color:var(--navy);margin-bottom:24px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.fg{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
+.fg:last-of-type{margin-bottom:0;}
+.fg label{font-size:13px;font-weight:600;color:var(--navy);}
+.fg input,.fg select,.fg textarea{
+  background:var(--white);border:2px solid var(--gray2);border-radius:8px;
+  padding:13px 16px;font-family:var(--ff);font-size:15px;color:var(--text);
+  outline:none;transition:border-color 0.15s;width:100%;
+}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--navy);}
+.fg textarea{height:100px;resize:none;}
+.fg select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239aa0ac' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;}
+.submit-btn{
+  width:100%;background:var(--red);color:var(--white);
+  padding:16px;border-radius:8px;font-family:var(--ff);font-size:16px;font-weight:700;
+  border:none;cursor:pointer;transition:background 0.15s;margin-top:8px;
+}
+.submit-btn:hover{background:var(--red2);}
+
+/* ─── FOOTER ─────────────────────────── */
+footer{background:var(--navy);padding:56px 24px 0;}
+.footer-inner{max-width:1200px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;}
+.footer-logo{font-size:20px;font-weight:800;color:var(--white);display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.footer-logo span{color:var(--red);}
+.footer-tagline{font-size:14px;color:rgba(255,255,255,0.35);line-height:1.7;max-width:240px;}
+.footer-col h4{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.35);margin-bottom:16px;}
+.footer-col ul{list-style:none;}
+.footer-col ul li{margin-bottom:10px;}
+.footer-col ul li a{font-size:14px;color:rgba(255,255,255,0.55);text-decoration:none;transition:color 0.15s;}
+.footer-col ul li a:hover{color:var(--white);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding:20px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.footer-bottom p{font-size:13px;color:rgba(255,255,255,0.25);}
+
+/* ─── STICKY BAR ─────────────────────── */
+.sticky-bar{
+  position:fixed;bottom:0;left:0;right:0;z-index:200;
+  background:var(--navy);border-top:3px solid var(--red);
+  padding:12px 24px;display:flex;align-items:center;justify-content:space-between;
+  gap:16px;transform:translateY(100%);transition:transform 0.3s ease;
+  flex-wrap:wrap;
+}
+.sticky-bar.show{transform:translateY(0);}
+.sticky-bar-text{font-size:14px;color:rgba(255,255,255,0.8);}
+.sticky-bar-text strong{color:var(--white);}
+.sticky-btns{display:flex;gap:10px;flex-shrink:0;}
+.sticky-btn-r{background:var(--red);color:var(--white);padding:10px 20px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;transition:background 0.15s;}
+.sticky-btn-r:hover{background:var(--red2);}
+.sticky-btn-o{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);padding:10px 20px;border-radius:6px;font-size:13px;font-weight:600;text-decoration:none;border:1px solid rgba(255,255,255,0.15);transition:all 0.15s;}
+.sticky-btn-o:hover{color:var(--white);}
+
+/* ─── WHATSAPP ───────────────────────── */
+.wa{
+  position:fixed;bottom:80px;right:24px;z-index:300;
+  width:56px;height:56px;background:#25D366;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,0.2);
+  transition:transform 0.2s;
+}
+.wa:hover{transform:scale(1.1);}
+.wa svg{width:28px;height:28px;fill:#fff;}
+
+/* ─── MOBILE ─────────────────────────── */
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .nav-phone span{display:none;}
+  .hero{padding:48px 20px 56px;}
+  .hero-stats{gap:0;}
+  .hero-stat{min-width:100px;padding:0 16px;}
+  .hs-num{font-size:26px;}
+  .section{padding:56px 20px;}
+  .products-grid,.compat-grid,.why-grid,.how-steps,.testi-grid{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+  .contact-inner{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .custom-card{flex-direction:column;}
+  .cta-band-btns{flex-direction:column;align-items:center;}
+  .trust-bar-inner{gap:16px;justify-content:flex-start;}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP NOTICE -->
+<div class="top-notice">
+  Free wholesale price list — <a href="#contact">download now</a> &nbsp;·&nbsp; Same-day quotes on orders over $5,000
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo"><div class="nav-logo-dot"></div>Fleet <span>United</span></a>
+    <div class="nav-links">
+      <a href="#products">Products</a>
+      <a href="#why">Why Us</a>
+      <a href="#how">How It Works</a>
+      <a href="#contact" class="nav-cta">Get Pricing</a>
+    </div>
+    <a href="tel:18005338387" class="nav-phone">
+      <div class="nav-phone-icon">
+        <svg viewBox="0 0 16 16"><path d="M3 1h3l1.5 4-2 1.5a11 11 0 005 5l1.5-2 4 1.5V14a1 1 0 01-1 1C6 15 1 10 1 4a1 1 0 011-1z"/></svg>
+      </div>
+      <span>1-800-FLEET-US</span>
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">USA-Based · Factory Direct · B2B Wholesale</div>
+    <h1>Truck Parts at <span>Wholesale Price.</span><br>Direct from the Source.</h1>
+    <p>Fleet United supplies high-volume semi truck parts direct from verified overseas manufacturers — 30–40% below typical distributor pricing. No middlemen. Real savings.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Get Free Wholesale Pricing</a>
+      <a href="#products" class="btn-secondary">Browse Parts</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hs-num">500+</div>
+        <div class="hs-label">Part SKUs</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hs-num">30–40%</div>
+        <div class="hs-label">Below Market</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hs-num">48 hr</div>
+        <div class="hs-label">Quote Turnaround</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hs-num">200+</div>
+        <div class="hs-label">Fleets Served</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item"><div class="trust-tick"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,8 8.5,2"/></svg></div>QC Inspected Every Order</div>
+    <div class="trust-item"><div class="trust-tick"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,8 8.5,2"/></svg></div>USA-Based Operations</div>
+    <div class="trust-item"><div class="trust-tick"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,8 8.5,2"/></svg></div>DOT Compliant Parts</div>
+    <div class="trust-item"><div class="trust-tick"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,8 8.5,2"/></svg></div>Trade Assurance Protected</div>
+    <div class="trust-item"><div class="trust-tick"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,8 8.5,2"/></svg></div>Free Price List Download</div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="section products-section" id="products">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Product Catalog</div>
+      <h2 class="section-title">High-Volume Parts, Priced for Fleets</h2>
+      <p class="section-sub">All prices shown are wholesale. MOQ applies. Quotes within 48 hours on any volume.</p>
+    </div>
+
+    <div class="products-grid">
+
+      <!-- LED -->
+      <div class="prod-card">
+        <div class="prod-header">
+          <div class="prod-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </div>
+          <span class="prod-badge red">Best Seller</span>
+        </div>
+        <div class="prod-name">LED Marker &amp; Clearance Lights</div>
+        <div class="prod-desc">DOT-compliant LED lights for all major truck makes. High reorder volume — every fleet needs these regularly.</div>
+        <div class="prod-price-box">
+          <div class="prod-price-left">
+            <div class="prod-price-from">From</div>
+            <div class="prod-price">$4.20 <span class="prod-price-unit">/ unit</span></div>
+          </div>
+          <div class="prod-moq">MOQ: 50 units</div>
+        </div>
+        <a href="#contact" class="prod-link">Request Quote <svg viewBox="0 0 16 16"><line x1="3" y1="8" x2="13" y2="8"/><polyline points="9,4 13,8 9,12"/></svg></a>
+      </div>
+
+      <!-- Air Filters -->
+      <div class="prod-card">
+        <div class="prod-header">
+          <div class="prod-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/><rect x="1" y="4" width="22" height="16" rx="2"/></svg>
+          </div>
+          <span class="prod-badge red">High Volume</span>
+        </div>
+        <div class="prod-name">Engine &amp; Cabin Air Filters</div>
+        <div class="prod-desc">Cross-reference compatible with all major diesel engines. Replaced every 25,000 miles — constant fleet reorder item.</div>
+        <div class="prod-price-box">
+          <div class="prod-price-left">
+            <div class="prod-price-from">From</div>
+            <div class="prod-price">$8.50 <span class="prod-price-unit">/ unit</span></div>
+          </div>
+          <div class="prod-moq">MOQ: 100 units</div>
+        </div>
+        <a href="#contact" class="prod-link">Request Quote <svg viewBox="0 0 16 16"><line x1="3" y1="8" x2="13" y2="8"/><polyline points="9,4 13,8 9,12"/></svg></a>
+      </div>
+
+      <!-- Brakes -->
+      <div class="prod-card">
+        <div class="prod-header">
+          <div class="prod-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="22"/></svg>
+          </div>
+          <span class="prod-badge navy">Safety Critical</span>
+        </div>
+        <div class="prod-name">Brake Shoe Kits</div>
+        <div class="prod-desc">FMVSS-compliant. Compatible with Meritor, Bendix, and Haldex systems. Full hardware kit included with every set.</div>
+        <div class="prod-price-box">
+          <div class="prod-price-left">
+            <div class="prod-price-from">From</div>
+            <div class="prod-price">$28.00 <span class="prod-price-unit">/ set</span></div>
+          </div>
+          <div class="prod-moq">MOQ: 50 sets</div>
+        </div>
+        <a href="#contact" class="prod-link">Request Quote <svg viewBox="0 0 16 16"><line x1="3" y1="8" x2="13" y2="8"/><polyline points="9,4 13,8 9,12"/></svg></a>
+      </div>
+
+      <!-- Mud Flaps -->
+      <div class="prod-card">
+        <div class="prod-header">
+          <div class="prod-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="18" rx="1"/><rect x="14" y="3" width="7" height="18" rx="1"/></svg>
+          </div>
+          <span class="prod-badge red">DOT Required</span>
+        </div>
+        <div class="prod-name">Mud Flaps &amp; Splash Guards</div>
+        <div class="prod-desc">Universal and model-specific fit. Rubber and poly options. DOT required on all commercial vehicles in the USA.</div>
+        <div class="prod-price-box">
+          <div class="prod-price-left">
+            <div class="prod-price-from">From</div>
+            <div class="prod-price">$11.00 <span class="prod-price-unit">/ pair</span></div>
+          </div>
+          <div class="prod-moq">MOQ: 100 pairs</div>
+        </div>
+        <a href="#contact" class="prod-link">Request Quote <svg viewBox="0 0 16 16"><line x1="3" y1="8" x2="13" y2="8"/><polyline points="9,4 13,8 9,12"/></svg></a>
+      </div>
+
+      <!-- Oil Filters -->
+      <div class="prod-card">
+        <div class="prod-header">
+          <div class="prod-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <span class="prod-badge green">Monthly Reorder</span>
+        </div>
+        <div class="prod-name">Heavy Duty Oil Filters</div>
+        <div class="prod-desc">Fits Cummins, Detroit, Paccar and Volvo D-series engines. Service every 25,000 miles. Auto-reorder programs available for shops.</div>
+        <div class="prod-price-box">
+          <div class="prod-price-left">
+            <div class="prod-price-from">From</div>
+            <div class="prod-price">$6.50 <span class="prod-price-unit">/ unit</span></div>
+          </div>
+          <div class="prod-moq">MOQ: 100 units</div>
+        </div>
+        <a href="#contact" class="prod-link">Request Quote <svg viewBox="0 0 16 16"><line x1="3" y1="8" x2="13" y2="8"/><polyline points="9,4 13,8 9,12"/></svg></a>
+      </div>
+
+    </div>
+
+    <!-- Custom sourcing -->
+    <div class="custom-card">
+      <div class="custom-card-left">
+        <h3>Don't See Your Part?</h3>
+        <p>Send us any part number or description. Our procurement team will source and quote it within 5–7 business days — no obligation.</p>
+      </div>
+      <a href="#contact">Submit a Custom Request</a>
+    </div>
+  </div>
+</section>
+
+<!-- COMPATIBILITY -->
+<section class="section compat-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Compatibility</div>
+      <h2 class="section-title">Works With All Major Truck Makes</h2>
+      <p class="section-sub">Our parts are cross-reference compatible with every major semi truck brand in the USA.</p>
+    </div>
+    <div class="compat-grid">
+      <div class="compat-card">Freightliner</div>
+      <div class="compat-card">Kenworth</div>
+      <div class="compat-card">Peterbilt</div>
+      <div class="compat-card">Volvo</div>
+      <div class="compat-card">International</div>
+      <div class="compat-card">Mack</div>
+      <div class="compat-card">Western Star</div>
+      <div class="compat-card">+ 40 More</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section why-section" id="why">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Why Fleet United</div>
+      <h2 class="section-title">Why Fleets Choose Us</h2>
+      <p class="section-sub">We built Fleet United to solve one problem: American fleets overpay for parts. Here's how we fix that.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <div class="why-title">30–40% Below Market</div>
+        <div class="why-desc">We source direct from vetted manufacturers — no distributors, no middlemen. You keep the margin.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="why-title">QC Inspected</div>
+        <div class="why-desc">Every bulk shipment is inspected by an independent QC agency before leaving the factory. You get a full report.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div>
+        <div class="why-title">48-Hour Quotes</div>
+        <div class="why-desc">Send us your parts list and we'll return a complete wholesale price quote within 48 hours — on any volume.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg></div>
+        <div class="why-title">USA-Based</div>
+        <div class="why-desc">We're registered and operated in the USA. Domestic warehousing, clear invoicing, and a real team you can call.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+  <div class="how-inner">
+    <div class="how-header">
+      <div class="section-tag">Simple Process</div>
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,0.5);">Getting wholesale pricing from Fleet United takes less than 5 minutes.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-step-num">1</div>
+        <div class="how-step-title">Send Your Parts List</div>
+        <div class="how-step-desc">Fill in our short form with the parts you need and your monthly volume. Takes 2 minutes.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">2</div>
+        <div class="how-step-title">We Build Your Quote</div>
+        <div class="how-step-desc">Our team prepares a full wholesale price quote within 48 hours — no hidden fees.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">3</div>
+        <div class="how-step-title">Review &amp; Order</div>
+        <div class="how-step-desc">Accept the quote and place your first order. First-time orders come with a QC sample check.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">4</div>
+        <div class="how-step-title">Reorder on Autopilot</div>
+        <div class="how-step-desc">Set up an auto-reorder schedule and never worry about stockouts again.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testi-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Reviews</div>
+      <h2 class="section-title">What Our Customers Say</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"We switched our LED supply to Fleet United and cut our parts cost by 34%. Quality is consistent, delivery is on time, every time."</div>
+        <div class="testi-author">
+          <div class="testi-avatar">MT</div>
+          <div><div class="testi-name">Marcus T.</div><div class="testi-role">Fleet Manager · 180 Trucks · Texas</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"Fleet United gives us factory-direct pricing with QC that holds up. We now source 60% of our consumables through them exclusively."</div>
+        <div class="testi-author">
+          <div class="testi-avatar">LR</div>
+          <div><div class="testi-name">Linda R.</div><div class="testi-role">Owner · Parts Distributor · Ohio</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"The auto-reorder program means we haven't had a stockout since we signed up. That alone saved us thousands in emergency purchases."</div>
+        <div class="testi-author">
+          <div class="testi-avatar">RS</div>
+          <div><div class="testi-name">Ray S.</div><div class="testi-role">Owner · Heavy Duty Repair Shop · California</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <h2>Ready to Cut Your Parts Cost?</h2>
+    <p>Send us your top reorder items and we'll return a full wholesale price list within 48 hours. No commitment, no obligation.</p>
+    <div class="cta-band-btns">
+      <a href="#contact" class="btn-white">Get My Free Price List</a>
+      <a href="tel:18005338387" class="btn-outline-w">Call Us Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="section contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div class="section-tag">Get In Touch</div>
+      <h3 style="margin-top:14px;">Request Wholesale Pricing</h3>
+      <p>Fill in the form and our team will respond within 24 hours with pricing tailored to your parts and volume.</p>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="contact-card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,14 22,4"/></svg></div>
+          <div><div class="contact-card-label">Email</div><div class="contact-card-val">sales@fleetunitedusa.com</div></div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a1 1 0 01-1 1C9 20 4 15 4 9a1 1 0 011-1z"/></svg></div>
+          <div><div class="contact-card-label">Phone / WhatsApp</div><div class="contact-card-val">1-800-FLEET-US</div></div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div>
+          <div><div class="contact-card">
+          <div class="contact-card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></div>
+          <div><div class="contact-card-label">Website</div><div class="contact-card-val">fleetunitedusa.com</div></div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div>
+          <div><div class="contact-card-label">Response Time</div><div class="contact-card-val">Within 24 hours · Mon–Fri</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h3>Send Us Your Parts List</h3>
+      <div class="form-row">
+        <div class="fg"><label>First Name</label><input type="text" placeholder="John"/></div>
+        <div class="fg"><label>Last Name</label><input type="text" placeholder="Smith"/></div>
+      </div>
+      <div class="fg"><label>Company Name</label><input type="text" placeholder="Smith Logistics LLC"/></div>
+      <div class="fg"><label>Business Type</label>
+        <select>
+          <option value="">Select your business type...</option>
+          <option>Fleet Owner</option>
+          <option>Wholesaler / Distributor</option>
+          <option>Maintenance Shop</option>
+          <option>Truck Body Shop</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="fg"><label>Fleet Size</label>
+          <select>
+            <option value="">How many trucks?</option>
+            <option>1–10 Trucks</option>
+            <option>10–50 Trucks</option>
+            <option>50–200 Trucks</option>
+            <option>200+ Trucks</option>
+          </select>
+        </div>
+        <div class="fg"><label>Monthly Parts Spend</label>
+          <select>
+            <option value="">Approx. monthly spend?</option>
+            <option>Under $5,000</option>
+            <option>$5,000 – $20,000</option>
+            <option>$20,000+</option>
+          </select>
+        </div>
+      </div>
+      <div class="fg"><label>Email Address</label><input type="email" placeholder="john@smithlogistics.com"/></div>
+      <div class="fg"><label>Parts You Need</label><textarea placeholder="e.g. Air filters × 500/month, LED marker lights × 200, oil filters × 300..."></textarea></div>
+      <button class="submit-btn">Send My Request →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo"><div class="nav-logo-dot"></div>Fleet <span>United</span></div>
+        <div class="footer-tagline">Premium semi truck parts sourced globally, operated from the USA. Built for fleets that move at scale.</div>
+        <div style="margin-top:14px;font-size:13px;color:rgba(255,255,255,0.5);">
+          <div>🌐 fleetunitedusa.com</div>
+          <div>✉ sales@fleetunitedusa.com</div>
+          <div>📞 1-800-FLEET-US</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#">LED Lighting</a></li>
+          <li><a href="#">Air Filters</a></li>
+          <li><a href="#">Brake Components</a></li>
+          <li><a href="#">Mud Flaps</a></li>
+          <li><a href="#">Oil Filters</a></li>
+          <li><a href="#">Custom Sourcing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">How We Source</a></li>
+          <li><a href="#">Quality Control</a></li>
+          <li><a href="#">Wholesale Program</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">Call Us</a></li>
+          <li><a href="#">WhatsApp</a></li>
+          <li><a href="#">Email Us</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Fleet United USA LLC — fleetunitedusa.com LLC · All Rights Reserved</p>
+      <p>USA · Global Sourcing · B2B Wholesale Only</p>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="sticky-bar-text"><strong>Fleet United</strong> — Get wholesale pricing on your parts within 48 hours.</div>
+  <div class="sticky-btns">
+    <a href="#contact" class="sticky-btn-r">Get Free Pricing</a>
+    <a href="tel:18005338387" class="sticky-btn-o">Call Now</a>
+  </div>
+</div>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/18005338387" target="_blank" class="wa">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflar
