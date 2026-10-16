@@ -1,310 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fleet United — Coming Soon</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0f0f0f;
-      color: #f5f5f5;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-      overflow: hidden;
-      position: relative;
-    }
-
-    /* Road background lines */
-    body::before {
-      content: '';
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 90px;
-      background: #1a1a1a;
-      z-index: 0;
-    }
-    body::after {
-      content: '';
-      position: fixed;
-      bottom: 40px;
-      left: -100%;
-      right: -100%;
-      height: 6px;
-      background: repeating-linear-gradient(
-        90deg,
-        #f5c518 0px, #f5c518 60px,
-        transparent 60px, transparent 120px
-      );
-      z-index: 1;
-      animation: road 1.2s linear infinite;
-    }
-
-    @keyframes road {
-      from { transform: translateX(0); }
-      to   { transform: translateX(120px); }
-    }
-
-    /* Truck animation */
-    .truck-lane {
-      position: fixed;
-      bottom: 20px;
-      left: -300px;
-      z-index: 2;
-      animation: drive 8s linear infinite;
-    }
-
-    @keyframes drive {
-      from { left: -300px; }
-      to   { left: 110%; }
-    }
-
-    .truck {
-      font-size: 72px;
-      line-height: 1;
-      filter: drop-shadow(0 0 12px rgba(255,100,0,0.4));
-    }
-
-    /* Main card */
-    .card {
-      position: relative;
-      z-index: 10;
-      background: #1c1c1c;
-      border: 1px solid #2e2e2e;
-      border-radius: 20px;
-      padding: 3rem 3.5rem;
-      max-width: 640px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 0 60px rgba(0,0,0,0.6);
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 2rem;
-    }
-
-    .logo-dot {
-      width: 14px;
-      height: 14px;
-      background: #e53935;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    .logo-text {
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      color: #fff;
-    }
-
-    .logo-text span {
-      color: #e53935;
-    }
-
-    .headline {
-      font-size: 42px;
-      font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 1rem;
-      color: #fff;
-    }
-
-    .headline em {
-      font-style: normal;
-      color: #e53935;
-    }
-
-    .subheadline {
-      font-size: 17px;
-      color: #999;
-      line-height: 1.6;
-      margin-bottom: 0.5rem;
-    }
-
-    .funny {
-      font-size: 15px;
-      color: #666;
-      margin-bottom: 2.5rem;
-      font-style: italic;
-    }
-
-    .divider {
-      border: none;
-      border-top: 1px solid #2e2e2e;
-      margin: 2rem 0;
-    }
-
-    .notify-label {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: #666;
-      margin-bottom: 1rem;
-    }
-
-    .notify-form {
-      display: flex;
-      gap: 10px;
-      max-width: 420px;
-      margin: 0 auto;
-    }
-
-    .notify-form input {
-      flex: 1;
-      background: #141414;
-      border: 1px solid #333;
-      border-radius: 10px;
-      padding: 12px 16px;
-      font-size: 15px;
-      color: #f5f5f5;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-
-    .notify-form input::placeholder { color: #555; }
-    .notify-form input:focus { border-color: #e53935; }
-
-    .notify-form button {
-      background: #e53935;
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-      padding: 12px 22px;
-      font-size: 15px;
-      font-weight: 600;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: background 0.2s, transform 0.1s;
-    }
-
-    .notify-form button:hover  { background: #c62828; }
-    .notify-form button:active { transform: scale(0.97); }
-
-    .thanks {
-      display: none;
-      font-size: 15px;
-      color: #4caf50;
-      margin-top: 0.75rem;
-    }
-
-    .footer-note {
-      margin-top: 2.5rem;
-      font-size: 13px;
-      color: #444;
-    }
-
-    .footer-note a {
-      color: #666;
-      text-decoration: none;
-    }
-
-    /* Status badges */
-    .badges {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 2.5rem;
-    }
-
-    .badge {
-      background: #222;
-      border: 1px solid #333;
-      border-radius: 999px;
-      padding: 6px 14px;
-      font-size: 13px;
-      color: #aaa;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .badge .dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #f5c518;
-      animation: blink 1.4s ease-in-out infinite;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50%       { opacity: 0.2; }
-    }
-
-    @media (max-width: 520px) {
-      .card { padding: 2rem 1.5rem; }
-      .headline { font-size: 30px; }
-      .notify-form { flex-direction: column; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fleet United — Custom Logo Mud Flaps for Your Fleet</title>
+<meta name="description" content="Custom logo mud flaps for trucking fleets. Logo hot-stamped or molded in by established US manufacturers. 24x30 and 24x36, rubber or poly. Serving Chicagoland from Naperville, IL.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#1a1a1a;line-height:1.6;background:#fff}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+header{background:#0f0f0f;color:#fff}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}
+.brand{font-weight:800;font-size:1.25rem;letter-spacing:.5px}.brand span{color:#f5c518}
+.btn{display:inline-block;background:#f5c518;color:#0f0f0f;font-weight:700;text-decoration:none;padding:.8rem 1.4rem;border-radius:6px}
+.btn:hover{background:#ffd84a}
+.btn.sm{padding:.5rem 1rem;font-size:.9rem}
+.hero{padding:4rem 0 4.5rem}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;max-width:15ch;margin-bottom:1rem}
+.hero p{font-size:1.15rem;color:#cfcfcf;max-width:52ch;margin-bottom:1.75rem}
+.stripe{height:6px;background:repeating-linear-gradient(90deg,#f5c518 0 60px,#0f0f0f 60px 120px)}
+section{padding:3.5rem 0}
+h2{font-size:1.75rem;margin-bottom:1.5rem}
+.grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{border:1px solid #e5e5e5;border-radius:8px;padding:1.4rem}
+.card h3{font-size:1.1rem;margin-bottom:.4rem}
+.alt{background:#f6f6f4}
+ol.steps{list-style:none;counter-reset:s;display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+ol.steps li{counter-increment:s;background:#fff;border-radius:8px;padding:1.4rem;border:1px solid #e5e5e5}
+ol.steps li::before{content:counter(s);display:inline-flex;width:2rem;height:2rem;align-items:center;justify-content:center;background:#0f0f0f;color:#f5c518;border-radius:50%;font-weight:800;margin-bottom:.6rem}
+.cta{background:#0f0f0f;color:#fff;text-align:center}
+.cta p{color:#cfcfcf;margin:0 auto 1.5rem;max-width:55ch}
+footer{background:#0f0f0f;color:#999;font-size:.9rem;padding:1.5rem 0;border-top:1px solid #222}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem}
+</style>
 </head>
 <body>
-
-  <!-- Animated truck rolling across the bottom -->
-  <div class="truck-lane">
-    <div class="truck">🚛</div>
-  </div>
-
-  <div class="card">
-
-    <div class="logo">
-      <div class="logo-dot"></div>
-      <div class="logo-text">Fleet <span>United</span></div>
+<header>
+  <div class="wrap">
+    <nav><div class="brand">FLEET <span>UNITED</span></div>
+    <a class="btn sm" href="mailto:linda.cross@fleetunitedusa.com?subject=Mud%20flap%20quote%20request">Request a quote</a></nav>
+    <div class="hero">
+      <h1>Custom logo mud flaps for your fleet</h1>
+      <p>Your company logo hot-stamped or molded right into the flap by established US manufacturers, so it won't peel or scrape off like a sticker.</p>
+      <a class="btn" href="mailto:linda.cross@fleetunitedusa.com?subject=Mud%20flap%20quote%20request&amp;body=Company%20name%3A%0AFlap%20size%20(24x30%20or%2024x36)%3A%0AMaterial%20(rubber%20or%20poly)%3A%0AQuantity%20(pairs)%3A%0A%0APlease%20attach%20your%20logo%20file.">Request a quote</a>
     </div>
-
-    <h1 class="headline">Our website is<br><em>in the shop.</em></h1>
-
-    <p class="subheadline">
-      Ironic, we know — a parts company whose website needs parts.
-    </p>
-    <p class="funny">
-      Estimated delivery: soon. No, really. We confirmed the HTS code and everything.
-    </p>
-
-    <div class="badges">
-      <div class="badge"><span class="dot"></span> Loading the inventory</div>
-      <div class="badge"><span class="dot"></span> Customs is being customs</div>
-      <div class="badge"><span class="dot"></span> Coffee: brewing</div>
-    </div>
-
-    <hr class="divider" />
-
-    <p class="notify-label">Get notified when we launch</p>
-
-    <form class="notify-form" onsubmit="handleSubmit(event)">
-      <input type="email" placeholder="your@email.com" required />
-      <button type="submit">Notify me</button>
-    </form>
-    <p class="thanks" id="thanks">You're on the list. We'll roll your way soon. 🚛</p>
-
-    <p class="footer-note">
-      In the meantime, questions? Email us at
-      <a href="mailto:linda.cross@fleetunitedusa.com">linda.cross@fleetunitedusa.com</a>
-    </p>
-
   </div>
+  <div class="stripe"></div>
+</header>
 
-  <script>
-    function handleSubmit(e) {
-      e.preventDefault();
-      e.target.style.display = 'none';
-      document.getElementById('thanks').style.display = 'block';
-    }
-  </script>
+<section>
+  <div class="wrap">
+    <h2>What we offer</h2>
+    <div class="grid">
+      <div class="card"><h3>Logo built in</h3><p>Hot-stamped or molded in, not printed on top. Your branding lasts as long as the flap.</p></div>
+      <div class="card"><h3>Standard sizes</h3><p>24" x 30" and 24" x 36", the sizes most tractors and trailers run.</p></div>
+      <div class="card"><h3>Rubber or poly</h3><p>Choose heavy-duty rubber or lightweight polyethylene to fit how your trucks run.</p></div>
+      <div class="card"><h3>Quoted for you</h3><p>Pricing depends on size and quantity. Tell us what you need and we'll send a quote.</p></div>
+    </div>
+  </div>
+</section>
 
+<section class="alt">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li><h3>Send your details</h3><p>Email your logo, flap size and quantity.</p></li>
+      <li><h3>Get a quote</h3><p>We price it for your size, material and order quantity.</p></li>
+      <li><h3>Approve the proof</h3><p>You see and sign off on the design before anything is made.</p></li>
+      <li><h3>Delivered</h3><p>Your finished flaps ship straight to your yard.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Serving Chicagoland fleets</h2>
+    <p>Fleet United is based in Naperville, Illinois, and works with trucking companies and owner-operators across the Chicago area.</p>
+    <a class="btn" href="mailto:linda.cross@fleetunitedusa.com?subject=Mud%20flap%20quote%20request">Email linda.cross@fleetunitedusa.com</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><span>&copy; 2026 Fleet United &middot; Naperville, IL</span><a href="mailto:linda.cross@fleetunitedusa.com">linda.cross@fleetunitedusa.com</a></div>
+</footer>
 </body>
 </html>

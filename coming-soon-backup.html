@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fleet United — Coming Soon</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f0f0f;
+      color: #f5f5f5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Road background lines */
+    body::before {
+      content: '';
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 90px;
+      background: #1a1a1a;
+      z-index: 0;
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      bottom: 40px;
+      left: -100%;
+      right: -100%;
+      height: 6px;
+      background: repeating-linear-gradient(
+        90deg,
+        #f5c518 0px, #f5c518 60px,
+        transparent 60px, transparent 120px
+      );
+      z-index: 1;
+      animation: road 1.2s linear infinite;
+    }
+
+    @keyframes road {
+      from { transform: translateX(0); }
+      to   { transform: translateX(120px); }
+    }
+
+    /* Truck animation */
+    .truck-lane {
+      position: fixed;
+      bottom: 20px;
+      left: -300px;
+      z-index: 2;
+      animation: drive 8s linear infinite;
+    }
+
+    @keyframes drive {
+      from { left: -300px; }
+      to   { left: 110%; }
+    }
+
+    .truck {
+      font-size: 72px;
+      line-height: 1;
+      filter: drop-shadow(0 0 12px rgba(255,100,0,0.4));
+    }
+
+    /* Main card */
+    .card {
+      position: relative;
+      z-index: 10;
+      background: #1c1c1c;
+      border: 1px solid #2e2e2e;
+      border-radius: 20px;
+      padding: 3rem 3.5rem;
+      max-width: 640px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 0 60px rgba(0,0,0,0.6);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 2rem;
+    }
+
+    .logo-dot {
+      width: 14px;
+      height: 14px;
+      background: #e53935;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #fff;
+    }
+
+    .logo-text span {
+      color: #e53935;
+    }
+
+    .headline {
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .headline em {
+      font-style: normal;
+      color: #e53935;
+    }
+
+    .subheadline {
+      font-size: 17px;
+      color: #999;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+
+    .funny {
+      font-size: 15px;
+      color: #666;
+      margin-bottom: 2.5rem;
+      font-style: italic;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #2e2e2e;
+      margin: 2rem 0;
+    }
+
+    .notify-label {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .notify-form {
+      display: flex;
+      gap: 10px;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .notify-form input {
+      flex: 1;
+      background: #141414;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 15px;
+      color: #f5f5f5;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .notify-form input::placeholder { color: #555; }
+    .notify-form input:focus { border-color: #e53935; }
+
+    .notify-form button {
+      background: #e53935;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 22px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .notify-form button:hover  { background: #c62828; }
+    .notify-form button:active { transform: scale(0.97); }
+
+    .thanks {
+      display: none;
+      font-size: 15px;
+      color: #4caf50;
+      margin-top: 0.75rem;
+    }
+
+    .footer-note {
+      margin-top: 2.5rem;
+      font-size: 13px;
+      color: #444;
+    }
+
+    .footer-note a {
+      color: #666;
+      text-decoration: none;
+    }
+
+    /* Status badges */
+    .badges {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .badge {
+      background: #222;
+      border: 1px solid #333;
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 13px;
+      color: #aaa;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #f5c518;
+      animation: blink 1.4s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.2; }
+    }
+
+    @media (max-width: 520px) {
+      .card { padding: 2rem 1.5rem; }
+      .headline { font-size: 30px; }
+      .notify-form { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Animated truck rolling across the bottom -->
+  <div class="truck-lane">
+    <div class="truck">🚛</div>
+  </div>
+
+  <div class="card">
+
+    <div class="logo">
+      <div class="logo-dot"></div>
+      <div class="logo-text">Fleet <span>United</span></div>
+    </div>
+
+    <h1 class="headline">Our website is<br><em>in the shop.</em></h1>
+
+    <p class="subheadline">
+      Ironic, we know — a parts company whose website needs parts.
+    </p>
+    <p class="funny">
+      Estimated delivery: soon. No, really. We confirmed the HTS code and everything.
+    </p>
+
+    <div class="badges">
+      <div class="badge"><span class="dot"></span> Loading the inventory</div>
+      <div class="badge"><span class="dot"></span> Customs is being customs</div>
+      <div class="badge"><span class="dot"></span> Coffee: brewing</div>
+    </div>
+
+    <hr class="divider" />
+
+    <p class="notify-label">Get notified when we launch</p>
+
+    <form class="notify-form" onsubmit="handleSubmit(event)">
+      <input type="email" placeholder="your@email.com" required />
+      <button type="submit">Notify me</button>
+    </form>
+    <p class="thanks" id="thanks">You're on the list. We'll roll your way soon. 🚛</p>
+
+    <p class="footer-note">
+      In the meantime, questions? Email us at
+      <a href="mailto:linda.cross@fleetunitedusa.com">linda.cross@fleetunitedusa.com</a>
+    </p>
+
+  </div>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      e.target.style.display = 'none';
+      document.getElementById('thanks').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
