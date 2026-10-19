@@ -604,7 +604,9 @@ body.store #photo-2:checked ~ .stage img.for-2,
 body.store #photo-3:checked ~ .stage img.for-3,
 body.store #photo-1:checked ~ .cap.for-1,
 body.store #photo-2:checked ~ .cap.for-2,
-body.store #photo-3:checked ~ .cap.for-3 { display: block; }
+body.store #photo-3:checked ~ .cap.for-3,
+body.store #photo-4:checked ~ .stage img.for-4,
+body.store #photo-4:checked ~ .cap.for-4 { display: block; }
 body.store .cap { margin: .75rem 0 0; color: var(--steel); font-size: .9rem; }
 body.store .zoom-btn {
   position: absolute;
@@ -625,10 +627,12 @@ body.store .thumbs label { width: 4.6rem; cursor: pointer; }
 body.store .thumbs img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border: 1px solid transparent; }
 body.store #photo-1:checked ~ .thumbs label[for="photo-1"] img,
 body.store #photo-2:checked ~ .thumbs label[for="photo-2"] img,
-body.store #photo-3:checked ~ .thumbs label[for="photo-3"] img { border-color: var(--navy); outline: 2px solid var(--red); outline-offset: 1px; }
+body.store #photo-3:checked ~ .thumbs label[for="photo-3"] img,
+body.store #photo-4:checked ~ .thumbs label[for="photo-4"] img { border-color: var(--navy); outline: 2px solid var(--red); outline-offset: 1px; }
 body.store #photo-1:focus-visible ~ .thumbs label[for="photo-1"] img,
 body.store #photo-2:focus-visible ~ .thumbs label[for="photo-2"] img,
-body.store #photo-3:focus-visible ~ .thumbs label[for="photo-3"] img { outline: 2px solid var(--red); outline-offset: 3px; }
+body.store #photo-3:focus-visible ~ .thumbs label[for="photo-3"] img,
+body.store #photo-4:focus-visible ~ .thumbs label[for="photo-4"] img { outline: 2px solid var(--red); outline-offset: 3px; }
 
 body.store .buy h1 { margin: .45rem 0 .8rem; font-size: clamp(2.3rem, 4vw, 3.6rem); }
 body.store .status { display: flex; align-items: center; gap: .8rem; margin: 0 0 .8rem; }

@@ -22,7 +22,7 @@
       stripeLink: null,
       url: "shop/mud-flaps/",
       image: "assets/products/mud-flaps-600.jpg",
-      imageAlt: "Navy Fleet United logo mud flaps on the rear of a trailer, seen from behind on a highway",
+      imageAlt: "Rear of a grain hopper trailer with plain black rubber mud flaps behind the wheels (illustrative photo)",
       spec: "24×30 or 24×36, rubber or poly, logo hot-stamped or molded in"
     },
     {
@@ -48,7 +48,7 @@
       stripeLink: null,
       url: "shop/ratchet-straps/",
       image: "assets/products/ratchet-straps-600.jpg",
-      imageAlt: "Orange polyester ratchet straps with steel ratchets securing a load on a flatbed",
+      imageAlt: "Yellow polyester webbing wound on a steel ratchet",
       spec: "Polyester webbing with a steel ratchet, 2\" or 4\" wide"
     },
     {
@@ -60,9 +60,8 @@
       statusLabel: "Out of stock",
       stripeLink: null,
       url: "shop/gladhands/",
-      image: null,
-      placeholder: "Gladhands & seals",
-      imageAlt: "Photo coming soon for gladhands and seals",
+      image: "assets/products/gladhands-600.jpg",
+      imageAlt: "Two gladhand couplings with rubber seals on red and blue air lines",
       spec: "Air brake coupling heads, with replacement rubber seals"
     },
     {
@@ -76,7 +75,7 @@
       url: "shop/air-brake-coils/",
       image: "assets/products/air-brake-coils-600.jpg",
       imageAlt: "Red and blue coiled air brake lines hanging at the back of a tractor",
-      spec: "Coiled service (red) and supply (blue) air lines"
+      spec: "Coiled emergency/supply (red) and service (blue) air lines"
     }
   ];
 

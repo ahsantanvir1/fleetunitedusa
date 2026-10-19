@@ -3,6 +3,8 @@
 Rules followed: no prices, delivery times, part numbers, certifications or load ratings. Every variant is **an option to be confirmed** before launch.
 Collection banner: `assets/products/collection-banner-2400x800.jpg`
 
+**Gallery order rule:** the real Commons photos (`<slug>-1600.jpg` and `-detailN-`) are always the MAIN image and come first. The `*-studio-*` files (`led-marker-lights-studio-*`, `ratchet-straps-studio-*`, `air-brake-coils-studio-*`) are **secondary gallery images only**, placed after the main photos. As of Oct 19, 2026 they are real CC0 photos (the AI versions are retired; see assets/products/CREDITS.md). Gladhands have a real photo only, no studio shot.
+
 ## Shared shipping tab (all products)
 **Shipping & quotes:** We ship within the United States. Shipping is quoted with your order based on quantity and destination. For a quote, bulk or fleet orders, or questions, email **linda.cross@fleetunitedusa.com**.
 
@@ -54,8 +56,8 @@ Slug `ratchet-straps` · Gallery: `ratchet-straps-1600.jpg`
 **Specs:** polyester webbing · steel ratchet · 2" or 4" wide · 27' or 30' long · working load limit to be confirmed.
 
 ## 4. Gladhands & Seals · OUT OF STOCK
-Slug `gladhands` · Gallery: **no photo yet** (see report)
-**Variants (options to be confirmed):** With seal / Without seal · Service (red) / Emergency-supply (blue)
+Slug `gladhands` · Gallery: `gladhands-1600.jpg` (real photo: gladhand pair with red and blue grips, rubber seal visible; U.S. Army photo, public domain). Replaces the "photo coming soon" tile. No AI studio shot (rejected for wrong anatomy).
+**Variants (options to be confirmed):** With seal / Without seal · Emergency-supply (red) / Service (blue)
 
 **Description:** A solid air connection, every hook-up. Replacement gladhands and seals that keep air where it belongs.
 
