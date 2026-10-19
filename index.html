@@ -42,7 +42,8 @@ text-decoration:none;background:var(--red);color:#fff;padding:1.05rem 1.8rem;bor
 .nav .links a{color:#fff;text-decoration:none;font-family:var(--display);letter-spacing:.16em;text-transform:uppercase;font-size:.82rem;opacity:.85}
 .nav .links a:hover{opacity:1}
 .nav .links .btn{padding:.7rem 1.2rem;font-size:.8rem;opacity:1}
-@media(max-width:760px){.nav .links a:not(.btn){display:none}}
+.nav-right{display:flex;align-items:center;gap:.7rem}
+.nav .links{gap:1.35rem}
 
 /* hero */
 .hero{position:relative;min-height:min(100svh,980px);color:#fff;overflow:hidden;display:flex;align-items:flex-end;background:var(--navy-2)}
@@ -129,6 +130,11 @@ footer{background:var(--navy-2);color:rgba(255,255,255,.55);font-size:.88rem;pad
 footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
 footer img{height:26px;opacity:.9}
 footer a{text-decoration:none}footer a:hover{color:#fff}
+footer .credits{flex-basis:100%;margin:.35rem 0 0;color:rgba(255,255,255,.5);font-size:.78rem;line-height:1.55}
+footer .credits a{text-decoration:underline;text-underline-offset:2px}
+.teaser-grid{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.5rem 1.15rem;margin:2.6rem 0 1.6rem}
+.teaser .trust-row{margin-bottom:1.8rem}
+.teaser .btn{margin-top:.2rem}
 
 /* Copy stays visible if JS or IntersectionObserver never runs. The rise is a CSS enhancement only. */
 @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
@@ -136,21 +142,40 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
 .rv.d1{animation-delay:.08s}.rv.d2{animation-delay:.16s}.rv.d3{animation-delay:.24s}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{animation:none;opacity:1;transform:none}.hero .bg{animation:none;transform:none}}
 </style>
+<link rel="stylesheet" href="assets/shop.css">
+<style>
+@media(min-width:961px){body:not(.store) .nav-toggle{display:none !important}}
+@media(max-width:960px){
+  body:not(.store) .nav .links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:.4rem 1.25rem 1.2rem;background:rgba(11,37,69,.98)}
+  body:not(.store) .nav .links.is-open{display:flex}
+  body:not(.store) .nav .links a{display:block;padding:.95rem 0;border-bottom:1px solid rgba(255,255,255,.1);opacity:1}
+  body:not(.store) .nav .links .btn{width:100%;margin-top:.85rem;text-align:center}
+}
+body:not(.store) .nav.menu-open{background:rgba(11,37,69,.98)}
+</style>
 </head>
 <body>
+<a class="skip" href="#top">Skip to content</a>
 <header class="nav" id="nav">
   <div class="wrap">
     <a href="#top" aria-label="Fleet United home"><img src="assets/fleet-united-horizontal-white.svg" alt="Fleet United"></a>
-    <nav class="links">
-      <a href="#product">Product</a><a href="#how">Ordering</a><a href="#why">Why it works</a>
-      <a class="btn" href="mailto:linda.cross@fleetunitedusa.com?subject=Mud%20flap%20quote%20request">Get a quote</a>
-    </nav>
+    <div class="nav-right">
+      <nav class="links" id="nav-links" aria-label="Primary">
+        <a href="#product">Product</a>
+        <a href="shop/">Shop</a>
+        <a href="#how">Ordering</a>
+        <a href="#why">Why it works</a>
+        <a class="btn" href="mailto:linda.cross@fleetunitedusa.com?subject=Mud%20flap%20quote%20request">Get a quote</a>
+      </nav>
+      <button type="button" class="cart-launcher" data-cart-open aria-label="Open pre-order cart, 0 items"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h15l-1.6 9.2H7.2L6 7z"></path><path d="M6 7L5 4H2"></path><circle cx="9" cy="20" r="1.2"></circle><circle cx="18" cy="20" r="1.2"></circle></svg><span class="cart-count" data-cart-count aria-hidden="true">0</span></button>
+      <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-links">Menu</button>
+    </div>
   </div>
 </header>
 
 <main id="top">
 <section class="hero" style="padding:0">
-  <div class="bg" id="heroBg" role="img" aria-label="Semi-truck tanker on an open highway seen from behind, with navy Fleet United logo mud flaps"></div>
+  <div class="bg" id="heroBg" role="img" aria-label="Rear of a black and aluminium grain trailer with plain black mud flaps (illustrative photo)"></div>
   <div class="wrap">
     <div class="eyebrow rv">Custom logo mud flaps &middot; Naperville, IL</div>
     <h1 class="rv d1">Your logo. <em>On every mile.</em></h1>
@@ -171,8 +196,8 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
 <section class="product" id="product">
   <div class="wrap grid">
     <figure class="rv">
-      <img src="assets/flap-closeup.jpg" alt="Close-up of a navy Fleet United logo mud flap on the rear of a trailer" loading="lazy" width="1290" height="855">
-      <figcaption>Navy poly flap with a white logo, shown on a trailer.</figcaption>
+      <img src="assets/flap-closeup.jpg" alt="Plain black rubber mud flap and tail light on the rear of a tractor (illustrative photo)" loading="lazy" width="1290" height="855">
+      <figcaption>Illustrative photo of a plain rubber flap. On the flaps you order, your logo is hot-stamped or molded in.</figcaption>
     </figure>
     <div>
       <div class="eyebrow rv"><b>01</b> The product</div>
@@ -218,6 +243,51 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
   </div>
 </section>
 
+<section class="teaser" id="shop-preview">
+  <div class="wrap">
+    <div class="eyebrow"><b>04</b> The shop</div>
+    <h2>Parts for the way you run</h2>
+    <p class="lead">Mud flaps, marker lights, ratchet straps and air-line parts. Fleet pricing on request. What is listed is out of stock or coming soon. You can still send a pre-order request.</p>
+    <ul class="teaser-grid">
+      <li>
+        <a class="pcard" href="shop/mud-flaps/">
+          <span class="pcard-media"><img src="assets/products/mud-flaps-600.jpg" alt="Rear of a grain hopper trailer with plain black rubber mud flaps behind the wheels (illustrative photo)" width="600" height="600"><span class="badge">Out of stock</span></span>
+          <span class="pcard-body"><span class="pcard-kicker">Mud flaps</span><h3 class="pcard-title">Custom Logo Mud Flaps</h3><span class="pcard-spec">24×30 or 24×36, rubber or poly, logo hot-stamped or molded in</span><span class="pcard-price">Fleet pricing on request</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="pcard" href="shop/led-marker-lights/">
+          <span class="pcard-media"><img src="assets/products/led-marker-lights-600.jpg" alt="Round amber LED marker light in a chrome housing on a trailer" width="600" height="600"><span class="badge">Out of stock</span></span>
+          <span class="pcard-body"><span class="pcard-kicker">Lighting</span><h3 class="pcard-title">LED Marker &amp; Clearance Lights</h3><span class="pcard-spec">Sealed LED marker lights in amber or red</span><span class="pcard-price">Fleet pricing on request</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="pcard" href="shop/ratchet-straps/">
+          <span class="pcard-media"><img src="assets/products/ratchet-straps-600.jpg" alt="Yellow polyester webbing wound on a steel ratchet" width="600" height="600"><span class="badge">Out of stock</span></span>
+          <span class="pcard-body"><span class="pcard-kicker">Cargo</span><h3 class="pcard-title">Ratchet Straps</h3><span class="pcard-spec">Polyester webbing with a steel ratchet, 2″ or 4″ wide</span><span class="pcard-price">Fleet pricing on request</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="pcard" href="shop/gladhands/">
+          <span class="pcard-media"><img src="assets/products/gladhands-600.jpg" srcset="assets/products/gladhands-600.jpg 600w, assets/products/gladhands-1200.jpg 1200w" sizes="(min-width: 900px) 30vw, 100vw" alt="Two gladhand couplings with rubber seals on red and blue air lines" width="600" height="600"><span class="badge">Out of stock</span></span>
+          <span class="pcard-body"><span class="pcard-kicker">Air systems</span><h3 class="pcard-title">Gladhands &amp; Seals</h3><span class="pcard-spec">Air brake coupling heads, with replacement rubber seals</span><span class="pcard-price">Fleet pricing on request</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="pcard" href="shop/air-brake-coils/">
+          <span class="pcard-media"><img src="assets/products/air-brake-coils-600.jpg" alt="Red and blue coiled air brake lines hanging at the back of a tractor" width="600" height="600"><span class="badge badge-soon">Coming soon</span></span>
+          <span class="pcard-body"><span class="pcard-kicker">Air systems</span><h3 class="pcard-title">Coiled Air Brake Lines</h3><span class="pcard-spec">Coiled emergency/supply (red) and service (blue) air lines</span><span class="pcard-price">Fleet pricing on request</span></span>
+        </a>
+      </li>
+    </ul>
+    <ul class="trust-row">
+      <li>Questions? Real people, US-based: <a href="mailto:linda.cross@fleetunitedusa.com">linda.cross@fleetunitedusa.com</a></li>
+      <li>Fleet and volume quotes on request.</li>
+    </ul>
+    <a class="btn" href="shop/">Browse the shop <span class="arr">&rarr;</span></a>
+  </div>
+</section>
+
 <section class="cta" id="contact">
   <div class="bg" id="ctaBg" aria-hidden="true"></div>
   <div class="wrap">
@@ -234,6 +304,7 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
   <div class="wrap">
     <img src="assets/fleet-united-horizontal-white.svg" alt="Fleet United">
     <span>&copy; 2026 Fleet United &middot; Naperville, IL &middot; <a href="mailto:linda.cross@fleetunitedusa.com">linda.cross@fleetunitedusa.com</a></span>
+    <p class="credits">Photo credits: Wikideas1, Alf van Beem, Impale and HobbyAstronaut (<a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license">CC0</a>, via Wikimedia Commons); &ldquo;<a href="https://www.flickr.com/photos/98027690@N00/2644008029">Teardrop marker light</a>&rdquo; and &ldquo;<a href="https://www.flickr.com/photos/98027690@N00/2626906332">new marker light</a>&rdquo; by dwstucke (<a href="https://creativecommons.org/licenses/by/2.0/" rel="license">CC BY 2.0</a>); &ldquo;<a href="https://commons.wikimedia.org/wiki/File:Ryder_Freightliner_Columbia_pic3.jpg">Ryder Freightliner Columbia pic3</a>&rdquo; by MobiusDaXter (<a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">CC BY-SA 3.0</a>; our crops are shared under the same license); <a href="https://commons.wikimedia.org/wiki/File:Atlas_Soldiers_Conduct_Vehicle_Recovery_Operation_(8949833).jpg">U.S. Army photo</a> by Sgt. James Lefty Larimer (public domain). Photos are cropped and edited, and they're illustrative: no endorsement is implied. <a href="/assets/products/CREDITS.md">Full credits</a>.</p>
   </div>
 </footer>
 
@@ -256,5 +327,7 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
   onScroll();
 })();
 </script>
+<script src="assets/catalog.js"></script>
+<script src="assets/shop.js"></script>
 </body>
 </html>
