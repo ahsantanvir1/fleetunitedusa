@@ -1,299 +1,260 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fleet United — Every State. Every Fleet. Custom Logo Mud Flaps</title>
-<meta name="description" content="Custom-logo mud flaps for fleets and owner-operators, from Naperville, IL. Logo hot-stamped or molded in by established US manufacturers. Sizes 24x30 and 24x36, rubber or poly.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://fleetunitedusa.com/">
-<meta property="og:title" content="Fleet United — Every State. Every Fleet. Custom Logo Mud Flaps">
-<meta property="og:description" content="Custom-logo mud flaps for fleets and owner-operators, from Naperville, IL. Logo hot-stamped or molded in by established US manufacturers. Sizes 24x30 and 24x36, rubber or poly.">
-<meta property="og:image" content="https://fleetunitedusa.com/brand/fleet-united-icon-color-512.png">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Fleet United — Every State. Every Fleet. Custom Logo Mud Flaps">
-<meta name="twitter:description" content="Custom-logo mud flaps for fleets and owner-operators, from Naperville, IL.">
-<meta name="twitter:image" content="https://fleetunitedusa.com/brand/fleet-united-icon-color-512.png">
-<link rel="icon" href="brand/fleet-united-icon-color-512.png" type="image/png">
-<link rel="apple-touch-icon" href="brand/fleet-united-icon-color-512.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fleet United | Custom Logo Mud Flaps for Fleets</title>
+<meta name="description" content="Custom logo mud flaps for trucking fleets. 24x30 and 24x36 in heavy-duty rubber or poly, with your logo hot-stamped or molded in. Naperville, IL.">
+<meta property="og:title" content="Fleet United | Custom Logo Mud Flaps">
+<meta property="og:description" content="Your logo, on every mile. 24x30 and 24x36 rubber or poly flaps for your fleet.">
+<meta property="og:image" content="assets/hero-1280.jpg">
+<link rel="icon" href="assets/fleet-united-icon-color.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero-2400.jpg">
 <style>
-:root {
-  --navy: #0B2545;
-  --red: #C8102E;
-  --white: #FFFFFF;
-  --steel: #5B6770;
-  --light: #E6E9ED;
-  color-scheme: light;
-}
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  font-family: Inter, Arial, sans-serif;
-  color: var(--steel);
-  background: var(--white);
-  line-height: 1.6;
-}
-img { max-width: 100%; }
-a { color: var(--navy); }
-.wrap { max-width: 1080px; margin: 0 auto; padding: 0 1.25rem; }
-h1, h2, h3 {
-  font-family: Oswald, Arial, sans-serif;
-  font-weight: 700;
-  color: var(--navy);
-  line-height: 1.1;
-  letter-spacing: 0.01em;
-}
-h2 { font-size: clamp(1.85rem, 3vw, 2.5rem); margin-bottom: 1rem; }
-h2::after {
-  content: "";
-  display: block;
-  width: 3rem;
-  height: 4px;
-  background: var(--red);
-  margin-top: 0.85rem;
-}
-header {
-  background: var(--white);
-  border-bottom: 4px solid var(--red);
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem 1.5rem;
-  flex-wrap: wrap;
-  padding: 0.9rem 0;
-}
-.logo img { display: block; height: 58px; width: auto; }
-.btn {
-  display: inline-block;
-  background: var(--red);
-  color: var(--white);
-  font-family: Inter, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.2;
-  text-decoration: none;
-  padding: 0.85rem 1.35rem;
-  border-radius: 4px;
-}
-.btn:hover { background: #9E0C24; }
-.btn:focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; }
-.btn.sm { padding: 0.6rem 1rem; font-size: 0.95rem; }
-.hero {
-  background: var(--navy);
-  color: var(--white);
-  padding: 5.5rem 0 6rem;
-}
-.hero h1 {
-  color: var(--white);
-  font-size: clamp(2.15rem, 4.6vw, 3.75rem);
-  max-width: none;
-  letter-spacing: 0;
-  margin-bottom: 1.25rem;
-}
-.hero p {
-  color: var(--light);
-  font-size: 1.2rem;
-  max-width: 38rem;
-  margin-bottom: 1.85rem;
-}
-.hero .btn:focus-visible { outline-color: var(--white); }
-section { padding: 4rem 0; }
-.cards, .steps {
-  display: grid;
-  gap: 1.25rem;
-  grid-template-columns: repeat(4, 1fr);
-  margin-top: 1.75rem;
-}
-.card, .steps li {
-  background: var(--light);
-  border-radius: 8px;
-  padding: 1.35rem 1.25rem 1.5rem;
-}
-.card h3, .steps h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.45rem;
-}
-.card p, .steps p { font-size: 1rem; }
-.standard { background: var(--light); }
-.split {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 2.5rem;
-  align-items: center;
-}
-.split p { font-size: 1.125rem; max-width: 40rem; }
-.split img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  background: var(--white);
-}
-.steps { list-style: none; counter-reset: step; }
-.steps li { counter-increment: step; }
-.steps li::before {
-  content: counter(step);
-  display: flex;
-  width: 2.25rem;
-  height: 2.25rem;
-  align-items: center;
-  justify-content: center;
-  background: var(--red);
-  color: var(--white);
-  border-radius: 50%;
-  font-family: Oswald, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 1.15rem;
-  margin-bottom: 0.75rem;
-}
-.quote {
-  background: var(--light);
-  text-align: left;
-}
-.quote p { max-width: 40rem; margin-bottom: 1.5rem; font-size: 1.125rem; }
-footer {
-  background: var(--navy);
-  color: var(--white);
-  padding: 2.5rem 0;
-}
-.footer-inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.25rem 2rem;
-}
-.footer-inner img { display: block; height: 56px; width: auto; }
-.footer-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  text-align: right;
-}
-.footer-meta a { color: var(--white); text-decoration: none; font-weight: 600; }
-.footer-meta a:hover { text-decoration: underline; }
-.footer-meta a:focus-visible { outline: 3px solid var(--white); outline-offset: 3px; }
-@media (max-width: 900px) {
-  .cards, .steps { grid-template-columns: 1fr 1fr; }
-  .split { grid-template-columns: 1fr; gap: 1.5rem; }
-}
-@media (max-width: 640px) {
-  .logo img { height: 44px; }
-  nav { padding: 0.75rem 0; }
-  nav .btn { width: 100%; text-align: center; }
-  .wrap { padding: 0 1rem; }
-  .hero { padding: 3.25rem 0 3.5rem; }
-  .hero h1 { font-size: clamp(1.5rem, 7.4vw, 2.6rem); }
-  .hero p { font-size: 1.05rem; }
-  .hero .btn, .quote .btn { display: block; text-align: center; }
-  section { padding: 2.75rem 0; }
-  .cards, .steps { grid-template-columns: 1fr; }
-  .footer-inner { flex-direction: column; align-items: flex-start; }
-  .footer-inner img { height: 44px; }
-  .footer-meta { text-align: left; }
-}
+:root{--navy:#0B2545;--navy-2:#081b33;--red:#C8102E;--steel:#5B6770;--light:#E6E9ED;--white:#fff;
+--display:'Oswald',Impact,'Arial Narrow',sans-serif;--body:'Inter',Arial,sans-serif;--max:1240px;--ease:cubic-bezier(.2,.7,.2,1)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-size:1.0625rem;line-height:1.7;color:var(--navy);background:var(--white);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem)}
+.eyebrow{font-family:var(--display);font-weight:500;letter-spacing:.22em;text-transform:uppercase;font-size:.8rem;color:var(--steel);display:flex;align-items:center;gap:.9rem}
+.eyebrow b{color:var(--red);font-weight:600}
+.eyebrow::after{content:"";height:1px;width:56px;background:currentColor;opacity:.4}
+h1,h2,h3{font-family:var(--display);font-weight:600;text-transform:uppercase;line-height:1.02;letter-spacing:.01em}
+h2{font-size:clamp(2.2rem,4.6vw,3.9rem);margin:1.1rem 0 1.5rem}
+.lead{font-size:clamp(1.1rem,1.5vw,1.25rem);color:var(--steel);max-width:54ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.8rem;font-family:var(--display);font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:.95rem;
+text-decoration:none;background:var(--red);color:#fff;padding:1.05rem 1.8rem;border:1px solid transparent;border-radius:2px;transition:transform .3s var(--ease),background .3s}
+.btn:hover{background:#a90d26;transform:translateY(-2px)}
+.btn .arr{transition:transform .3s var(--ease)}.btn:hover .arr{transform:translateX(4px)}
+.btn.ghost{background:transparent;border-color:rgba(255,255,255,.45)}.btn.ghost:hover{background:rgba(255,255,255,.08)}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .4s,box-shadow .4s,padding .4s;padding:1.5rem 0}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center}
+.nav img{height:34px;width:auto}
+.nav.solid{background:rgba(11,37,69,.96);backdrop-filter:blur(8px);padding:.85rem 0;box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.nav .links{display:flex;gap:2.2rem;align-items:center}
+.nav .links a{color:#fff;text-decoration:none;font-family:var(--display);letter-spacing:.16em;text-transform:uppercase;font-size:.82rem;opacity:.85}
+.nav .links a:hover{opacity:1}
+.nav .links .btn{padding:.7rem 1.2rem;font-size:.8rem;opacity:1}
+@media(max-width:760px){.nav .links a:not(.btn){display:none}}
+
+/* hero */
+.hero{position:relative;min-height:min(100svh,980px);color:#fff;overflow:hidden;display:flex;align-items:flex-end;background:var(--navy-2)}
+.hero .bg{position:absolute;inset:-6% 0 0 0;background:image-set(url(assets/hero-2400.jpg) 1x) center 60%/cover no-repeat;
+background-image:-webkit-image-set(url(assets/hero-1280.jpg) 1x,url(assets/hero-2400.jpg) 2x);background-image:image-set(url(assets/hero-1280.jpg) 1x,url(assets/hero-2400.jpg) 2x);
+transform:scale(1.06);animation:kb 18s var(--ease) forwards;will-change:transform}
+@media(min-width:1100px){.hero .bg{background-image:url(assets/hero-2400.jpg)}}
+@keyframes kb{to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:
+linear-gradient(90deg,rgba(8,27,51,.92) 0%,rgba(8,27,51,.72) 34%,rgba(8,27,51,.12) 64%,rgba(8,27,51,0) 80%),
+linear-gradient(0deg,rgba(8,27,51,.55) 0%,rgba(8,27,51,0) 22%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-top:8rem;padding-bottom:clamp(4rem,10vh,7rem)}
+.hero .eyebrow{color:rgba(255,255,255,.75)}
+.hero h1{font-size:clamp(3rem,7vw,6.5rem);margin:1.3rem 0 1.5rem;max-width:11ch}
+.hero h1 em{font-style:normal;color:rgba(255,255,255,.78)}
+.hero h1::before{content:"";display:block;width:64px;height:4px;background:var(--red);margin-bottom:1.4rem}
+.hero p{font-size:clamp(1.1rem,1.4vw,1.3rem);color:rgba(255,255,255,.82);max-width:46ch;margin-bottom:2.4rem}
+.hero .ctas{display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:34rem}
+.hero .ctas .btn{width:100%}
+@media(max-width:640px){.hero .ctas{grid-template-columns:1fr;max-width:none}}
+.hero .meta{display:flex;gap:2.5rem;margin-top:3.5rem;padding-top:1.6rem;border-top:1px solid rgba(255,255,255,.18);max-width:640px;flex-wrap:wrap}
+.hero .meta div{font-family:var(--display);text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;color:rgba(255,255,255,.6)}
+.hero .meta strong{display:block;font-size:1.45rem;letter-spacing:.04em;color:#fff;font-weight:500}
+@media(max-width:760px){.hero::before{background:linear-gradient(0deg,rgba(8,27,51,.95) 0%,rgba(8,27,51,.6) 55%,rgba(8,27,51,.2) 100%)}.hero .bg{background-position:72% 60%}.hero .meta{gap:1.4rem 2rem;margin-top:2.2rem}.nav img{height:28px}}
+
+.stripe{height:4px;background:linear-gradient(90deg,var(--red) 0 33%,var(--white) 33% 36%,var(--navy) 36%)}
+section{padding:clamp(5rem,11vw,9.5rem) 0}
+
+/* product */
+.product .grid{display:grid;grid-template-columns:7fr 5fr;gap:clamp(2.5rem,6vw,6rem);align-items:center}
+.product figure{position:relative}
+.product figure img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:2px}
+.product figure::after{content:"";position:absolute;left:-18px;bottom:-18px;width:38%;height:38%;border-left:1px solid var(--red);border-bottom:1px solid var(--red);z-index:-1}
+.product figcaption{font-size:.82rem;color:var(--steel);margin-top:.9rem}
+.specs{margin-top:2.2rem;border-top:1px solid var(--light)}
+.specs div{display:grid;grid-template-columns:9rem 1fr;gap:1rem;padding:1.15rem 0;border-bottom:1px solid var(--light)}
+.specs dt{font-family:var(--display);text-transform:uppercase;letter-spacing:.16em;font-size:.8rem;color:var(--steel);padding-top:.2rem}
+.specs dd{font-weight:500}
+.sizes{display:flex;gap:.6rem;flex-wrap:wrap}
+.chip{font-family:var(--display);font-size:1.15rem;letter-spacing:.04em;border:1px solid var(--navy);padding:.15rem .8rem;border-radius:2px}
+@media(max-width:900px){.product .grid{grid-template-columns:1fr}}
+
+/* steps */
+.how{background:var(--light)}
+.how .head{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;margin-bottom:4.5rem}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(11,37,69,.18)}
+.steps li{padding:2.2rem 2rem 0 0;position:relative}
+.steps li::before{content:"";position:absolute;top:-1px;left:0;width:48px;height:2px;background:var(--red)}
+.steps .n{font-family:var(--display);font-size:3.6rem;line-height:1;color:var(--navy);opacity:.14;font-weight:600}
+.steps h3{font-size:1.35rem;margin:.9rem 0 .6rem;letter-spacing:.03em}
+.steps p{color:var(--steel);font-size:1rem}
+@media(max-width:900px){.how .head{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr;gap:1rem 2rem}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* benefits */
+.benefits{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.benefits .eyebrow{color:rgba(255,255,255,.6)}
+.benefits .lead{color:rgba(255,255,255,.72)}
+.benefits .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.12);margin-top:4rem;border:1px solid rgba(255,255,255,.12)}
+.benefits .card{background:var(--navy);padding:2.6rem 2rem 2.8rem;transition:background .4s}
+.benefits .card:hover{background:#0e2d54}
+.benefits .ic{width:38px;height:38px;color:#fff;margin-bottom:1.8rem}
+.benefits .ic path,.benefits .ic circle,.benefits .ic rect{stroke:currentColor;fill:none;stroke-width:1.4}
+.benefits .ic .r{stroke:var(--red)}
+.benefits h3{font-size:1.3rem;letter-spacing:.03em;margin-bottom:.8rem}
+.benefits p{color:rgba(255,255,255,.7);font-size:1rem}
+.benefits .bigmark{position:absolute;right:-6%;top:-8%;width:46%;opacity:.05;pointer-events:none}
+@media(max-width:1000px){.benefits .cards{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.benefits .cards{grid-template-columns:1fr}}
+
+/* cta */
+.cta{position:relative;color:#fff;text-align:center;overflow:hidden;padding:clamp(6rem,13vw,11rem) 0}
+.cta .bg{position:absolute;inset:-10% 0;background:url(assets/flap-closeup.jpg) center/cover;filter:saturate(.8)}
+.cta::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(8,27,51,.88),rgba(8,27,51,.94))}
+.cta .wrap{position:relative;z-index:2}
+.cta .eyebrow{justify-content:center;color:rgba(255,255,255,.65)}
+.cta .eyebrow::before{content:"";height:1px;width:56px;background:currentColor;opacity:.4}
+.cta h2{font-size:clamp(2.6rem,6vw,5rem);max-width:16ch;margin:1.2rem auto 1.4rem}
+.cta p{color:rgba(255,255,255,.78);max-width:52ch;margin:0 auto 2.6rem}
+.cta .mail{display:block;margin-top:1.6rem;color:rgba(255,255,255,.7);font-size:.95rem;text-decoration:none;letter-spacing:.02em}
+.cta .mail:hover{color:#fff}
+
+footer{background:var(--navy-2);color:rgba(255,255,255,.55);font-size:.88rem;padding:2.4rem 0}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+footer img{height:26px;opacity:.9}
+footer a{text-decoration:none}footer a:hover{color:#fff}
+
+/* Copy stays visible if JS or IntersectionObserver never runs. The rise is a CSS enhancement only. */
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.rv{opacity:1;transform:none;animation:rise .8s var(--ease) both}
+.rv.d1{animation-delay:.08s}.rv.d2{animation-delay:.16s}.rv.d3{animation-delay:.24s}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{animation:none;opacity:1;transform:none}.hero .bg{animation:none;transform:none}}
 </style>
 </head>
 <body>
-<header>
+<header class="nav" id="nav">
   <div class="wrap">
-    <nav>
-      <a class="logo" href="/">
-        <img src="brand/fleet-united-horizontal-color.svg" alt="Fleet United" width="1004" height="262">
-      </a>
-      <a class="btn sm" href="mailto:linda.cross@fleetunitedusa.com?subject=Mud%20flap%20quote%20request&amp;body=Company%20name%3A%0AFlap%20size%20(24x30%20or%2024x36)%3A%0AMaterial%20(rubber%20or%20poly)%3A%0AQuantity%20(pairs)%3A%0A%0APlease%20attach%20your%20logo%20file.">Get a mud flap quote</a>
+    <a href="#top" aria-label="Fleet United home"><img src="assets/fleet-united-horizontal-white.svg" alt="Fleet United"></a>
+    <nav class="links">
+      <a href="#product">Product</a><a href="#how">Ordering</a><a href="#why">Why it works</a>
+      <a class="btn" href="mailto:linda.cross@fleetunitedusa.com?subject=Mud%20flap%20quote%20request">Get a quote</a>
     </nav>
   </div>
 </header>
 
-<main>
-  <section class="hero">
-    <div class="wrap">
-      <h1>Every state. Every fleet.<br>Your logo on every mile.</h1>
-      <p>Custom-logo mud flaps for fleets and owner-operators, from Naperville, IL.</p>
-      <a class="btn" href="mailto:linda.cross@fleetunitedusa.com?subject=Mud%20flap%20quote%20request&amp;body=Company%20name%3A%0AFlap%20size%20(24x30%20or%2024x36)%3A%0AMaterial%20(rubber%20or%20poly)%3A%0AQuantity%20(pairs)%3A%0A%0APlease%20attach%20your%20logo%20file.">Get a mud flap quote</a>
+<main id="top">
+<section class="hero" style="padding:0">
+  <div class="bg" id="heroBg" role="img" aria-label="Semi-truck tanker on an open highway seen from behind, with navy Fleet United logo mud flaps"></div>
+  <div class="wrap">
+    <div class="eyebrow rv">Custom logo mud flaps &middot; Naperville, IL</div>
+    <h1 class="rv d1">Your logo. <em>On every mile.</em></h1>
+    <p class="rv d2">Mud flaps with your company logo hot-stamped or molded in, made for the trucks and trailers your fleet already runs.</p>
+    <div class="ctas rv d3">
+      <a class="btn" href="mailto:linda.cross@fleetunitedusa.com?subject=Mud%20flap%20quote%20request">Request a quote <span class="arr">&rarr;</span></a>
+      <a class="btn ghost" href="#product">See the flaps</a>
     </div>
-  </section>
+    <div class="meta rv d3">
+      <div><strong>24&Prime; &times; 30&Prime;</strong>Standard size</div>
+      <div><strong>24&Prime; &times; 36&Prime;</strong>Standard size</div>
+      <div><strong>Rubber / Poly</strong>Your choice</div>
+    </div>
+  </div>
+</section>
+<div class="stripe" aria-hidden="true"></div>
 
-  <section>
-    <div class="wrap">
-      <h2>What we offer</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Logo built in</h3>
-          <p>Hot-stamped or molded in by established US manufacturers, so it won't peel or scrape off like a sticker.</p>
-        </article>
-        <article class="card">
-          <h3>Standard sizes</h3>
-          <p>24" x 30" and 24" x 36", the sizes most tractors and trailers run.</p>
-        </article>
-        <article class="card">
-          <h3>Rubber or poly</h3>
-          <p>Choose heavy-duty rubber or lightweight polyethylene to fit how your trucks run.</p>
-        </article>
-        <article class="card">
-          <h3>Quoted for you</h3>
-          <p>Pricing depends on size and quantity. Tell us what you need and we'll send a quote.</p>
-        </article>
-      </div>
+<section class="product" id="product">
+  <div class="wrap grid">
+    <figure class="rv">
+      <img src="assets/flap-closeup.jpg" alt="Close-up of a navy Fleet United logo mud flap on the rear of a trailer" loading="lazy" width="1290" height="855">
+      <figcaption>Navy poly flap with a white logo, shown on a trailer.</figcaption>
+    </figure>
+    <div>
+      <div class="eyebrow rv"><b>01</b> The product</div>
+      <h2 class="rv d1">Branding built into the flap</h2>
+      <p class="lead rv d2">The logo is part of the flap itself, so it won't peel, fade off or scrape away the way a sticker does. It lasts as long as the flap.</p>
+      <dl class="specs rv d3">
+        <div><dt>Sizes</dt><dd class="sizes"><span class="chip">24 &times; 30</span><span class="chip">24 &times; 36</span></dd></div>
+        <div><dt>Material</dt><dd>Heavy-duty rubber or lightweight polyethylene (poly)</dd></div>
+        <div><dt>Logo</dt><dd>Hot-stamped or molded in, not printed on top</dd></div>
+        <div><dt>Fits</dt><dd>The standard flap sizes most tractors and trailers run</dd></div>
+      </dl>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="standard">
-    <div class="wrap split">
-      <div>
-        <h2>One truck or one hundred, one standard.</h2>
-        <p>A one-truck owner-operator and a hundred-truck fleet get the same proof and the same standard. Send your logo and your count, and we send back a quote.</p>
-      </div>
-      <img src="brand/mockup-mudflaps-truck.png" alt="Semi-truck with custom logo mud flaps on the drive wheels and the trailer" width="1800" height="1200">
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow rv"><b>02</b> How ordering works</div><h2 class="rv d1">Four steps, one email to start</h2></div>
+      <p class="lead rv d2">Tell us what you run and we handle the rest. You approve the design before anything is made.</p>
     </div>
-  </section>
+    <ol class="steps">
+      <li class="rv"><div class="n">01</div><h3>Send your details</h3><p>Email your logo, flap size, material and how many you need.</p></li>
+      <li class="rv d1"><div class="n">02</div><h3>Get your quote</h3><p>We quote for your size, material and order quantity.</p></li>
+      <li class="rv d2"><div class="n">03</div><h3>Approve the proof</h3><p>You see the design and sign off before production starts.</p></li>
+      <li class="rv d3"><div class="n">04</div><h3>Delivered to your yard</h3><p>Finished flaps ship straight to you, ready to bolt on.</p></li>
+    </ol>
+  </div>
+</section>
 
-  <section>
-    <div class="wrap">
-      <h2>How it works</h2>
-      <ol class="steps">
-        <li>
-          <h3>Send your details</h3>
-          <p>Email your logo, flap size and quantity.</p>
-        </li>
-        <li>
-          <h3>Get a quote</h3>
-          <p>We price it for your size, material and order quantity.</p>
-        </li>
-        <li>
-          <h3>Approve the proof</h3>
-          <p>You see and sign off on the design before anything is made.</p>
-        </li>
-        <li>
-          <h3>Delivered</h3>
-          <p>Your finished flaps ship straight to your yard.</p>
-        </li>
-      </ol>
+<section class="benefits" id="why">
+  <img class="bigmark" src="assets/fleet-united-icon-color.svg" alt="" aria-hidden="true">
+  <div class="wrap">
+    <div class="eyebrow rv"><b>03</b> Fleet branding</div>
+    <h2 class="rv d1">The most-seen panel on your truck</h2>
+    <p class="lead rv d2">Every driver behind your rig looks straight at your mud flaps for miles. Make that space work for your company.</p>
+    <div class="cards">
+      <div class="card rv"><svg class="ic" viewBox="0 0 40 40"><circle cx="20" cy="20" r="7"/><path d="M2 20s7-11 18-11 18 11 18 11-7 11-18 11S2 20 2 20z"/><circle class="r" cx="20" cy="20" r="2"/></svg><h3>Seen at eye level</h3><p>Flaps sit right in the line of sight of traffic behind you, on the highway and at every stop.</p></div>
+      <div class="card rv d1"><svg class="ic" viewBox="0 0 40 40"><rect x="4" y="10" width="9" height="20"/><rect x="15.5" y="10" width="9" height="20"/><rect x="27" y="10" width="9" height="20"/><path class="r" d="M4 34h32"/></svg><h3>One look, every truck</h3><p>The same logo on every unit makes a fleet of any size look organized and established.</p></div>
+      <div class="card rv d2"><svg class="ic" viewBox="0 0 40 40"><path d="M20 4l13 5v10c0 9-6 14-13 17C13 33 7 28 7 19V9z"/><path class="r" d="M14 20l4 4 8-8"/></svg><h3>Built to last</h3><p>A hot-stamped or molded-in logo holds up to road spray, grime and pressure washing.</p></div>
+      <div class="card rv d3"><svg class="ic" viewBox="0 0 40 40"><path d="M6 30h28M10 30V18M18 30V12M26 30V20M34 30V8"/><path class="r" d="M6 30V24"/></svg><h3>Order what you need</h3><p>Outfit a few trucks or the whole fleet, in the size and material that fit how you run.</p></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="quote">
-    <div class="wrap">
-      <h2>Get a mud flap quote</h2>
-      <p>Email your logo, size (24x30 or 24x36), material (rubber or poly), and quantity. Pricing depends on size and quantity.</p>
-      <a class="btn" href="mailto:linda.cross@fleetunitedusa.com?subject=Mud%20flap%20quote%20request&amp;body=Company%20name%3A%0AFlap%20size%20(24x30%20or%2024x36)%3A%0AMaterial%20(rubber%20or%20poly)%3A%0AQuantity%20(pairs)%3A%0A%0APlease%20attach%20your%20logo%20file.">Get a mud flap quote</a>
-    </div>
-  </section>
+<section class="cta" id="contact">
+  <div class="bg" id="ctaBg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow rv">Request a quote</div>
+    <h2 class="rv d1">Put your name behind every trailer</h2>
+    <p class="rv d2">Email your logo, flap size, material and quantity. We'll reply with a quote and a proof to approve. We work with fleets and owner-operators across Chicagoland and beyond.</p>
+    <a class="btn rv d3" href="mailto:linda.cross@fleetunitedusa.com?subject=Mud%20flap%20quote%20request&amp;body=Company%3A%0ALogo%3A%20(attached)%0AFlap%20size%20(24x30%20or%2024x36)%3A%0AMaterial%20(rubber%20or%20poly)%3A%0AQuantity%3A%0A">Email for a quote <span class="arr">&rarr;</span></a>
+    <a class="mail rv d3" href="mailto:linda.cross@fleetunitedusa.com">linda.cross@fleetunitedusa.com</a>
+  </div>
+</section>
 </main>
 
 <footer>
-  <div class="wrap footer-inner">
-    <img src="brand/fleet-united-horizontal-white.svg" alt="Fleet United" width="1004" height="262">
-    <div class="footer-meta">
-      <span>Naperville, IL</span>
-      <a href="mailto:linda.cross@fleetunitedusa.com">linda.cross@fleetunitedusa.com</a>
-    </div>
+  <div class="wrap">
+    <img src="assets/fleet-united-horizontal-white.svg" alt="Fleet United">
+    <span>&copy; 2026 Fleet United &middot; Naperville, IL &middot; <a href="mailto:linda.cross@fleetunitedusa.com">linda.cross@fleetunitedusa.com</a></span>
   </div>
 </footer>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),hero=document.getElementById('heroBg'),cta=document.getElementById('ctaBg');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var ticking=false;
+  function onScroll(){
+    var y=window.scrollY;
+    nav.classList.toggle('solid',y>40);
+    if(!reduce){
+      if(y<window.innerHeight*1.2) hero.style.translate='0 '+(y*0.18)+'px';
+      var r=cta.parentNode.getBoundingClientRect();
+      if(r.top<window.innerHeight&&r.bottom>0) cta.style.translate='0 '+((r.top-window.innerHeight/2)*-0.08)+'px';
+    }
+    ticking=false;
+  }
+  window.addEventListener('scroll',function(){if(!ticking){requestAnimationFrame(onScroll);ticking=true}},{passive:true});
+  onScroll();
+})();
+</script>
 </body>
 </html>
