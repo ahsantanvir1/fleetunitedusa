@@ -6,7 +6,7 @@ Collection banner: `assets/products/collection-banner-2400x800.jpg`
 **Gallery order rule:** the real Commons photos (`<slug>-1600.jpg` and `-detailN-`) are always the MAIN image and come first. The `*-studio-*` files (`led-marker-lights-studio-*`, `ratchet-straps-studio-*`, `air-brake-coils-studio-*`) are **secondary gallery images only**, placed after the main photos. As of Oct 19, 2026 they are real CC0 photos (the AI versions are retired; see assets/products/CREDITS.md). Gladhands have a real photo only, no studio shot.
 
 ## Shared shipping tab (all products)
-**Shipping & quotes:** We ship within the United States. Shipping is quoted with your order based on quantity and destination. For a quote, bulk or fleet orders, or questions, email **linda.cross@fleetunitedusa.com**.
+**Shipping & quotes:** We ship within the United States. Shipping is quoted with your order based on quantity and destination. For a quote, bulk or fleet orders, or questions, email **hello@fleetunitedusa.com**.
 
 ---
 
