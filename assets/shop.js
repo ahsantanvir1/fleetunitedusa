@@ -178,8 +178,8 @@
       var key = lineKey(item);
       var title = el("h3");
       title.appendChild(el("a", { href: page(product.url), text: product.name }));
-      var meta = el("p", { text: optionPairs(item.options).join(" · ") || "Options to be confirmed" });
-      var note = el("p", { text: product.statusLabel + ". Options to be confirmed." });
+      var meta = el("p", { text: optionPairs(item.options).join(" · ") || "Options set on your quote" });
+      var note = el("p", { text: product.statusLabel + ". Options set on your quote." });
       var dec = el("button", { type: "button", "data-focus": key + ":dec", "aria-label": "Decrease quantity of " + product.name, text: "−" });
       var inc = el("button", { type: "button", "data-focus": key + ":inc", "aria-label": "Increase quantity of " + product.name, text: "+" });
       var input = el("input", {
@@ -426,7 +426,7 @@
       if (!quote) return;
       var lines = ["Please quote this for our fleet.", "", "Product: " + name].concat(optionPairs(selectedOptions(buy)));
       lines.push("Quantity: " + quantityOf(buy));
-      lines.push("Options: to be confirmed");
+      lines.push("Options: set on your quote");
       lines.push("", "Company:", "Fleet size:", "Ship to:");
       quote.href = mailto("Fleet quote request — " + name, lines.join("\n"));
     }
@@ -452,7 +452,7 @@
           "Product: " + name,
           "Notify: " + email.trim()
         ].concat(optionPairs(selectedOptions(buy)));
-        body.push("Options: to be confirmed");
+        body.push("Options: set on your quote");
         body.push("", "No payment. This is an availability request only.");
         openMailto(mailto("Notify me when available — " + name, body.join("\n")));
         var done = buy.querySelector("[data-notify-done]");
@@ -589,7 +589,7 @@
       var product = CATALOG.byId[item.id];
       lines.push((index + 1) + ") " + (product ? product.name : item.id));
       optionPairs(item.options).forEach(function (pair) { lines.push("   " + pair); });
-      lines.push("   Options: to be confirmed");
+      lines.push("   Options: set on your quote");
       lines.push("   Quantity: " + item.qty);
       lines.push("   Status: " + (product ? product.statusLabel : "Out of stock"));
       lines.push("   Pricing: " + CATALOG.pricingLabel);

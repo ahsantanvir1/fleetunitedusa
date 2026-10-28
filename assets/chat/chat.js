@@ -11,6 +11,10 @@
   //   const r = await fetch('/api/chat', { method: 'POST', body: JSON.stringify({ question, kb }) });
   //   return (await r.json()).answer;   // server must enforce the same guardrails as kb.guarded
   // };
+  // Guardrails for any LLM provider (system prompt must include): never claim DOT/SAE/FMVSS compliance,
+  // legality or approval; never say logos are molded or hot-stamped (they are printed on); never claim US
+  // manufacture or Made in USA; never mention a Naperville location; never promise durability, lifetime
+  // or won't-peel results. Contact: hello@fleetunitedusa.com, Ahsan Tanvir, Founder, Fleet United.
   var llmProvider = null;
 
   async function answer(question) {
