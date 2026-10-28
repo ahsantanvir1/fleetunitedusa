@@ -20,7 +20,7 @@ Slug `mud-flaps` · Gallery: `mud-flaps-1600.jpg`, `mud-flaps-detail1-1600.jpg` 
 - Logo built in, not stuck on
 - The two standard sizes most tractors and trailers run
 - Heavy-duty rubber or lightweight poly
-- You approve a proof before production
+- You approve a proof before the order
 
 **Applications:** trailers, tractors, fleets of any size.
 **Specs:** 24x30 or 24x36 · rubber or polyethylene · logo printed on · plain option available.

@@ -36,8 +36,8 @@
   function init() {
     var st = el('style'); st.textContent = css; document.head.appendChild(st);
     var btn = el('button', 'fuc-btn', 'Questions? Chat'); btn.setAttribute('aria-label', 'Open chat');
-    var box = el('div', 'fuc-box'); box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', 'Fleet United chat');
-    box.innerHTML = '<div class="fuc-h">Ask Fleet United<button aria-label="Close">&times;</button></div><div class="fuc-m"></div><form class="fuc-f"><input aria-label="Your question" placeholder="Ask about our parts..." maxlength="300"><button>Send</button></form>';
+    var box = el('div', 'fuc-box'); box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', 'Fleet United automated assistant');
+    box.innerHTML = '<div class="fuc-h">Automated assistant<button aria-label="Close">&times;</button></div><div class="fuc-m"></div><form class="fuc-f"><input aria-label="Your question" placeholder="Ask about our parts..." maxlength="300"><button>Send</button></form>';
     document.body.appendChild(btn); document.body.appendChild(box);
     var m = box.querySelector('.fuc-m'), f = box.querySelector('form'), inp = f.querySelector('input');
     function say(text, cls, quote) {
@@ -46,7 +46,7 @@
       m.appendChild(d); m.scrollTop = m.scrollHeight;
     }
     var greeted = false;
-    function toggle(o) { box.classList.toggle('open', o); if (o && !greeted) { greeted = true; load().then(function () { say('Hi! Ask me about our mud flaps, lights, straps, gladhands or air lines.', 'fuc-b'); }); inp.focus(); } }
+    function toggle(o) { box.classList.toggle('open', o); if (o && !greeted) { greeted = true; load().then(function () { say("Hi, I'm Fleet United's automated assistant.", 'fuc-b'); }); inp.focus(); } }
     btn.onclick = function () { toggle(!box.classList.contains('open')); };
     box.querySelector('.fuc-h button').onclick = function () { toggle(false); };
     f.onsubmit = function (e) { e.preventDefault(); var q = inp.value.trim(); if (!q) return; inp.value = ''; say(q, 'fuc-u'); answer(q).then(function (r) { say(r.text, 'fuc-b', r.quote); }); };
