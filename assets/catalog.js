@@ -103,7 +103,7 @@
   }
 
   root.FU_CATALOG = {
-    email: "linda.cross@fleetunitedusa.com",
+    email: "hello@fleetunitedusa.com",
     pricingLabel: "Fleet pricing on request",
     products: products,
     byId: byId,

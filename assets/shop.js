@@ -5,7 +5,7 @@
   var script = document.currentScript;
   var ROOT = new URL("../", script && script.src ? script.src : window.location.href);
   var CATALOG = window.FU_CATALOG || {
-    email: "linda.cross@fleetunitedusa.com",
+    email: "hello@fleetunitedusa.com",
     pricingLabel: "Fleet pricing on request",
     products: [],
     byId: {},
