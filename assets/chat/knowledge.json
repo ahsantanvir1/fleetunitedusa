@@ -1,0 +1,173 @@
+{
+  "_rules": "Answer only from this file. Never claim DOT, SAE or FMVSS compliance, legality or approval; molded or hot-stamped logos (logos are printed on); US manufacture or Made in USA; a Naperville location; or any durability, lifetime or no-peel guarantee. Contact is hello@fleetunitedusa.com; sender is Ahsan Tanvir, Founder, Fleet United.",
+  "contact": "hello@fleetunitedusa.com",
+  "fallback": "Good question. The fastest way to get a firm answer is to email us a quote request and we'll reply by email.",
+  "guarded": {
+    "keywords": [
+      "price",
+      "cost",
+      "how much",
+      "pricing",
+      "$",
+      "cheap",
+      "discount",
+      "when in stock",
+      "restock",
+      "back in stock",
+      "eta",
+      "ship date",
+      "dot",
+      "sae",
+      "fmvss",
+      "compliant",
+      "compliance",
+      "certified",
+      "legal",
+      "working load",
+      "wll",
+      "load limit",
+      "rating",
+      "rated",
+      "break strength",
+      "phone",
+      "call",
+      "number",
+      "text me",
+      "molded",
+      "hot stamp",
+      "hot stamped",
+      "made in usa",
+      "made in america",
+      "american made",
+      "us made",
+      "manufactured",
+      "naperville",
+      "warranty",
+      "guarantee",
+      "guaranteed",
+      "peel",
+      "durable",
+      "durability",
+      "approved"
+    ],
+    "answer": "We don't quote that in chat. Pricing, availability dates, certifications and ratings are confirmed per order. Please send a quote request by email with your part, size and quantity, and we'll reply by email."
+  },
+  "faq": [
+    {
+      "keywords": [
+        "mud flap",
+        "mudflap",
+        "flap",
+        "flaps",
+        "logo",
+        "custom",
+        "24x30",
+        "24x36",
+        "rubber",
+        "poly"
+      ],
+      "answer": "We offer custom mud flaps with your company logo printed on, in 24x30 and 24x36, rubber or poly. They're currently out of stock. Tap Notify me on the product page, or email a quote request with size, material, quantity and your logo file."
+    },
+    {
+      "keywords": [
+        "led",
+        "marker",
+        "clearance",
+        "light",
+        "lights",
+        "lamp"
+      ],
+      "answer": "We carry LED marker and clearance lights. They're currently out of stock. Use Notify me on the product page or email us a quote request."
+    },
+    {
+      "keywords": [
+        "ratchet",
+        "strap",
+        "straps",
+        "tie down",
+        "tiedown"
+      ],
+      "answer": "We carry ratchet straps. They're currently out of stock. Use Notify me or email us a quote request with length and quantity."
+    },
+    {
+      "keywords": [
+        "gladhand",
+        "gladhands",
+        "glad hand",
+        "seal",
+        "seals"
+      ],
+      "answer": "We carry gladhands and gladhand seals. They're currently out of stock. Use Notify me or email us a quote request."
+    },
+    {
+      "keywords": [
+        "air brake",
+        "coil",
+        "coiled",
+        "air line",
+        "brake line",
+        "lines"
+      ],
+      "answer": "We carry coiled air brake lines. They're currently out of stock. Use Notify me or email us a quote request."
+    },
+    {
+      "keywords": [
+        "stock",
+        "available",
+        "availability",
+        "in stock",
+        "out of stock",
+        "notify"
+      ],
+      "answer": "Everything is out of stock right now. Tap Notify me on any product page, or email a quote request and we'll follow up by email."
+    },
+    {
+      "keywords": [
+        "quote",
+        "order",
+        "buy",
+        "purchase",
+        "bulk",
+        "fleet order"
+      ],
+      "answer": "Quotes are handled by email. Send the part, size and quantity, and we'll reply with a quote."
+    },
+    {
+      "keywords": [
+        "where",
+        "area",
+        "chicago",
+        "chicagoland",
+        "illinois",
+        "local",
+        "serve",
+        "deliver",
+        "location"
+      ],
+      "answer": "Built for small fleets. Email us with what you need and we'll tell you how we can help."
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "reach",
+        "talk",
+        "human",
+        "person"
+      ],
+      "answer": "Email us at hello@fleetunitedusa.com and a person will reply. Quotes and questions are all handled by email."
+    },
+    {
+      "keywords": [
+        "what do you",
+        "who are",
+        "about",
+        "fleet united",
+        "sell",
+        "products",
+        "catalog"
+      ],
+      "answer": "Fleet United offers fleet parts for small fleets: custom logo mud flaps, LED marker and clearance lights, ratchet straps, gladhands and seals, and coiled air brake lines. Everything is currently out of stock, so Notify me or an email quote request is the way to start."
+    }
+  ]
+}

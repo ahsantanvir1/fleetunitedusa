@@ -23,7 +23,7 @@
       url: "shop/mud-flaps/",
       image: "assets/products/mud-flaps-600.jpg",
       imageAlt: "Rear of a grain hopper trailer with plain black rubber mud flaps behind the wheels (illustrative photo)",
-      spec: "24×30 or 24×36, rubber or poly, logo hot-stamped or molded in"
+      spec: "24×30 or 24×36, rubber or poly, logo printed on"
     },
     {
       id: "led-marker-lights",
